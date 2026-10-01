@@ -84,80 +84,171 @@
             </div>
         </section>
 
-        <!-- Security Deep-Dive Section -->
-        <section class="security-section" style="padding-top: 3.5rem;">
+        <!-- 6 Security Pillars Grid -->
+        <section class="services-section" style="padding-top: 3.5rem;">
             <div class="container">
-                <div class="security-card">
-                    <div class="security-content">
-                        <span class="section-eyebrow" style="color: var(--color-accent);">Security Architecture</span>
-                        <h2>Engineered from Ground Up for Enterprise Privacy</h2>
-                        <p>Unlike generic AI wrappers, Isomorphic implements strict physical and logical vector isolation between every client tenant.</p>
-                        
-                        <div class="security-features-list">
-                            <div class="sec-item">
-                                <strong>🔒 Isolated Vector Tenants:</strong> Your files and user queries are stored in private database containers and never shared across instances.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🚫 No Public LLM Training:</strong> Your documents and logs are strictly protected and never used to train public foundation models.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🎯 Deterministic Grounding:</strong> The chatbot is mathematically constrained to only cite facts from your approved knowledge files.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🛡️ Automated PII Redaction:</strong> Personal identifiers, student/customer IDs, and sensitive tokens are masked before logs are archived.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🔐 Granular Role-Based Access Control:</strong> Enforce 5-tier RBAC restricting slow query traces, token costs, and transcript exports.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🔑 Encryption in Transit &amp; At Rest:</strong> End-to-end TLS 1.3 encryption across all APIs and AES-256 storage for vector embeddings.
-                            </div>
-                        </div>
+                <div class="section-title-wrap">
+                    <span class="section-eyebrow">Zero-Trust Infrastructure</span>
+                    <h2>The 6 Pillars of Isomorphic AI Security</h2>
+                    <p>Unlike generic wrapper tools, our architecture is engineered from the ground up for strict organizational confidentiality and regulatory compliance.</p>
+                </div>
+
+                <div class="services-grid-six">
+                    <div class="service-box">
+                        <div class="service-icon">🔒</div>
+                        <h3>Dedicated Vector Partitions</h3>
+                        <p>100% logical and physical isolation of vector embeddings. Tenant data is isolated in dedicated database partitions with cryptographic tenant keys.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-icon">🚫</div>
+                        <h3>Zero Public Model Training</h3>
+                        <p>Your documentation, internal manuals, and user transcripts are never shared, sold, or used to train third-party foundation models.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-icon">🎯</div>
+                        <h3>Deterministic Grounding</h3>
+                        <p>Responses are mathematically constrained to approved source documents with strict cosine similarity thresholds and exact clause citations.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-icon">🛡️</div>
+                        <h3>Automated PII Masking</h3>
+                        <p>Named Entity Recognition (NER) and regex engines automatically sanitize credit cards, phone numbers, and sensitive IDs prior to indexing.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-icon">🔐</div>
+                        <h3>Prompt Injection Defense</h3>
+                        <p>Multi-layered semantic firewalls detect and block jailbreak attempts, system prompt overrides, and adversarial payload injections.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-icon">🔑</div>
+                        <h3>End-to-End Encryption</h3>
+                        <p>All data in transit is secured via TLS 1.3 with Perfect Forward Secrecy, while vector partitions and archives use AES-256 at rest.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Compliance & Governance Highlights -->
-        <section class="home-highlights-section" style="border-top: 1px solid var(--color-border);">
+        <!-- RBAC 5-Tier Permission Matrix Table -->
+        <section class="comparison-section" style="border-top: 1px solid var(--color-border);" data-reveal="fade-up">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="section-eyebrow">Compliance Standards</span>
-                    <h2>Strict AI Safety &amp; Audit Readiness</h2>
-                    <p>Maintain total visibility and compliance with automated turn-by-turn audit archiving and sentiment tracking.</p>
+                    <span class="section-eyebrow">Access Governance</span>
+                    <h2>5-Tier Role-Based Access Control (RBAC)</h2>
+                    <p>Enforce the principle of least privilege across your organization with granular permission tiers.</p>
+                </div>
+
+                <div class="security-matrix-wrap">
+                    <table class="security-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Administrative Capability</th>
+                                <th>Super Admin</th>
+                                <th>Org Admin</th>
+                                <th>Knowledge Manager</th>
+                                <th>Support Auditor</th>
+                                <th>Read-Only Viewer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Real-Time Telemetry &amp; Latency Stats</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ View Only</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ingestion Manager &amp; Vector Re-Indexing</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                            </tr>
+                            <tr>
+                                <td>GenAI Studio &amp; Hyperparameter Tuning</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                            </tr>
+                            <tr>
+                                <td>Turn-by-Turn Transcripts &amp; Audio Audit</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Masked View</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Masked View</span></td>
+                            </tr>
+                            <tr>
+                                <td>Native Grievance &amp; Tenant Ticket Resolution</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-loser">✕ View Only</span></td>
+                            </tr>
+                            <tr>
+                                <td>User Provisioning &amp; API Key Management</td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-winner">✓ Full Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                                <td><span class="badge-loser">✕ No Access</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Regulatory Alignment Grid -->
+        <section class="home-highlights-section" style="border-top: 1px solid var(--color-border);" data-reveal="fade-up">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-eyebrow">Certifications &amp; Standards</span>
+                    <h2>Continuous Compliance Readiness</h2>
+                    <p>Designed to satisfy stringent enterprise vendor security assessments and regulatory audits.</p>
                 </div>
 
                 <div class="home-grid-three">
                     <div class="highlight-card">
                         <div class="highlight-icon">📜</div>
-                        <h3>Turn-by-Turn Audit Logs</h3>
-                        <p>Every response records the exact vector documents cited, prompt token counts, latency metrics, and user feedback ratings.</p>
+                        <h3>SOC2 Type II Aligned</h3>
+                        <p>Continuous audit readiness covering Security, Confidentiality, and Availability trust criteria with annual third-party pen tests.</p>
                     </div>
 
                     <div class="highlight-card">
                         <div class="highlight-icon">🛡️</div>
-                        <h3>Prompt Injection Protection</h3>
-                        <p>Multi-layered input sanitizer filters prompt injections, jailbreak attempts, and system override attacks in real time.</p>
+                        <h3>ISO 27001 &amp; FERPA Prepared</h3>
+                        <p>Strict educational and organizational data isolation with automated PII redaction layers ensuring zero unauthorized data leakage.</p>
                     </div>
 
                     <div class="highlight-card">
-                        <div class="highlight-icon">⏱️</div>
-                        <h3>99.9% Uptime Guarantee</h3>
-                        <p>High-availability cloud infrastructure backed by automatic fallback LLM routing and distributed Redis caching.</p>
+                        <div class="highlight-icon">🌍</div>
+                        <h3>GDPR &amp; Global Privacy</h3>
+                        <p>Complete data sovereignty with European hosting options, cryptographic key management, and automated right-to-be-forgotten deletion.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Banner -->
-        <section class="cta-banner-section">
+        <!-- Action Showcase Banner -->
+        <section class="cta-banner-section" data-reveal="fade-up">
             <div class="container">
                 <div class="cta-banner-box">
-                    <h2>Have Custom Security or Compliance Requirements?</h2>
-                    <p>We work with enterprise security teams to complete vendor security questionnaires and custom deployment architectures.</p>
+                    <h2>Have Custom Enterprise Security Requirements?</h2>
+                    <p>Our security engineering team is ready to complete your vendor questionnaires, DPA agreements, and custom VPC reviews.</p>
                     <div class="cta-buttons-wrap">
                         <a href="contact.html" class="btn btn-primary btn-lg">Request Security Consultation &rarr;</a>
-                        <a href="platform.html" class="btn btn-outline btn-lg">Review Admin Portal RBAC</a>
+                        <a href="platform.html" class="btn btn-outline btn-lg">Inspect Admin Portal RBAC</a>
                     </div>
                 </div>
             </div>
