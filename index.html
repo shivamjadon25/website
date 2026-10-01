@@ -49,60 +49,6 @@
           "publisher": {
             "@id": "https://isomorphic.in/#organization"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://isomorphic.in/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How does Isomorphic eliminate AI hallucinations?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We use deterministic Retrieval-Augmented Generation (RAG). The chatbot is locked to retrieve facts only from your indexed documentation and verified URLs, attaching exact source citations to every statement."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How fast can our custom chatbot be deployed?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Most client instances are configured, tested, and live within 48 to 72 hours. Simply provide your website link or documents, and our engineering team handles the rest."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can we customize the chatbot branding, colors, and voice?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Primary colors, logos, starter quick-reply chips, speech-to-text dictation, text-to-speech audio, and session-end survey forms are fully customizable via your portal."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can the chatbot be tailored to our specific industry?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We deploy specialized assistants for universities, e-commerce stores, SaaS companies, healthcare clinics, and B2B enterprises—each calibrated with custom terminology and routing rules."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How is our proprietary data secured and kept private?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Each organization receives dedicated vector isolation. Your data is encrypted at rest and in transit, never shared across tenants, and never used to train any third-party foundation model."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can the chatbot integrate with our existing CRM and helpdesk?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We support webhooks and native connectors to push leads, conversation transcripts, and CSAT survey responses directly into HubSpot, Salesforce, Zendesk, Slack, or your custom database."
-              }
-            }
-          ]
         }
       ]
     }
@@ -112,66 +58,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=7.0">
-
-    <script>
-    // Immediate global declaration for fail-safe tab switching
-    window.switchShowcaseTab = function(targetTabId) {
-        if (!targetTabId) return;
-        var buttons = document.querySelectorAll('.showcase-tab-btn');
-        var panels = document.querySelectorAll('.showcase-tab-panel');
-
-        for (var i = 0; i < buttons.length; i++) {
-            var btn = buttons[i];
-            var isMatch = btn.getAttribute('data-tab') === targetTabId;
-            if (isMatch) {
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
-            } else {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            }
-        }
-
-        for (var j = 0; j < panels.length; j++) {
-            var panel = panels[j];
-            var isMatchPanel = panel.getAttribute('id') === targetTabId;
-            if (isMatchPanel) {
-                panel.classList.add('active');
-                panel.style.setProperty('display', 'block', 'important');
-            } else {
-                panel.classList.remove('active');
-                panel.style.setProperty('display', 'none', 'important');
-            }
-        }
-    };
-    </script>
+    <link rel="stylesheet" href="styles.css?v=19.0">
 </head>
 <body>
+    <!-- Luxury Animated Ambient Aurora Background & Grid -->
+    <div class="ambient-aurora-bg" aria-hidden="true">
+        <div class="aurora-grid-pattern"></div>
+        <div class="aurora-glow aurora-1"></div>
+        <div class="aurora-glow aurora-2"></div>
+        <div class="aurora-glow aurora-3"></div>
+    </div>
+
+    <!-- Reading Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
 
     <!-- Minimal Header Navigation -->
     <header class="site-header" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo" aria-label="Isomorphic Home">
+            <a href="index.html" class="logo" aria-label="Isomorphic Home">
                 <img src="assets/isomorphic-icon.png" alt="Isomorphic Emblem" class="site-logo-icon" width="26" height="26">
                 <span class="logo-text">isomorphic<span class="dot-in">.in</span></span>
             </a>
 
             <nav class="nav-links" id="nav-menu">
-                <a href="#platform">Admin Portal</a>
-                <a href="#chatbot-showcase">Chatbot Features</a>
-                <a href="#services">Services</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#process">How It Works</a>
-                <a href="#security">Security</a>
-                <a href="#faq">FAQ</a>
-                <a href="#founders">Leadership</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html" class="nav-active">Home</a>
+                <a href="platform.html">Platform</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="services.html">Services</a>
+                <a href="security.html">Security</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary btn-sm">
-                    Book a Demo
+                <a href="contact.html" class="btn btn-dark-pill">
+                    Book a demo &rarr;
                 </a>
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu" type="button">
                     <span class="toggle-bars">
@@ -184,29 +105,29 @@
         </div>
     </header>
 
-    <main>
+    <main id="page-content">
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" data-reveal="fade-up">
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <span>✦ Enterprise Conversational AI Platform</span>
+                        Enterprise Conversational AI &amp; RAG Platform
                     </div>
 
                     <h1 class="hero-title">
-                        Intelligent AI Chatbots Trained On <span class="accent-text">Your Exact Data.</span>
+                        Custom AI chatbots trained on your data.
                     </h1>
 
                     <p class="hero-subtitle">
-                        We build, deploy, and manage bespoke conversational AI systems for any industry. Deflect 80%+ of repetitive customer and user inquiries, deliver 24/7 accurate answers with verified citations, and audit every conversation in real time.
+                        Isomorphic builds enterprise RAG chatbots and voice agents that read your policies, manuals, and records to deliver accurate, source-cited answers.
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary btn-lg">
-                            Request Custom Demo &rarr;
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            Book a demo &rarr;
                         </a>
-                        <a href="#platform" class="btn btn-outline btn-lg">
-                            Explore Admin Portal &rarr;
+                        <a href="platform.html" class="btn btn-outline btn-lg">
+                            See it answer
                         </a>
                     </div>
 
@@ -217,567 +138,121 @@
                         <span class="pill-item">✓ SLA &amp; Grievance Escalation</span>
                         <span class="pill-item">✓ Live on Your Website in 48 Hours</span>
                     </div>
+
+                    <!-- Interactive Live AI Sandbox HUD -->
+                    <div class="hero-interactive-hud" data-reveal="fade-up">
+                        <div class="hud-header">
+                            <div class="hud-dots">
+                                <span class="hud-dot-red"></span>
+                                <span class="hud-dot-yellow"></span>
+                                <span class="hud-dot-green"></span>
+                            </div>
+                            <span class="hud-title">isomorphic-rag-engine // live-telemetry</span>
+                            <div class="hud-metrics">
+                                <span id="hud-latency-text">⚡ Latency: 320ms • Confidence: 99.8%</span>
+                            </div>
+                        </div>
+                        <div class="hud-body">
+                            <div class="hud-prompt-row">
+                                <span style="font-size:0.8rem; color:#94A3B8; font-weight:600;">Interactive Demos:</span>
+                                <button type="button" class="hud-chip active" data-hud="rag">⚡ Test Citation RAG</button>
+                                <button type="button" class="hud-chip" data-hud="voice">🎙️ Test Voice STT/TTS</button>
+                                <button type="button" class="hud-chip" data-hud="security">🔒 Test Security Guardrails</button>
+                            </div>
+                            <div class="hud-output-card">
+                                <div style="font-size:0.8rem; color:#94A3B8; margin-bottom:0.4rem; font-family:var(--font-mono);" id="hud-prompt-text">
+                                    "What is your enterprise SLA and vector isolation guarantee?"
+                                </div>
+                                <div id="hud-output-text" style="transition: opacity 0.2s ease;">
+                                    Isomorphic isolates 100% of client embeddings in dedicated tenant vector partitions. All answers are grounded deterministically in your proprietary documentation with verified URL &amp; page citations. Zero data is shared or used for foundation model training.
+                                </div>
+                                <div id="hud-citation-text" class="hud-citation-badge">
+                                    📄 Verified Source: Security_Whitepaper_v4.pdf • Page 14 §2.1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Administrative Portal Deep-Dive Showcase Section (Interactive Tabs) -->
-        <section id="platform" class="showcase-section">
+        <!-- Homepage High-Level Pillars Grid -->
+        <section class="home-highlights-section" data-reveal="fade-up">
             <div class="container">
                 <div class="section-title-wrap">
-                    <span class="section-eyebrow">Enterprise Administrative Portal</span>
-                    <h2>Comprehensive Admin &amp; AI Governance Suite</h2>
-                    <p>Explore real screenshots of our live administrative portal &mdash; inspect bot latency telemetry, manage human grievance escalations, calibrate GenAI models, and enforce role-based access control.</p>
+                    <span class="section-eyebrow">THE PROOF &bull; PLATFORM CAPABILITIES</span>
+                    <h2>Engineered for Reliability, Governance &amp; Scale</h2>
+                    <p>Discover how our end-to-end architecture bridges advanced generative models with enterprise data safety and real-time operational controls.</p>
                 </div>
 
-                <!-- Sleek Minimal Showcase Tab Navigation -->
-                <div class="showcase-tabs-nav" role="tablist" aria-label="Portal Navigation Tabs">
-                    <button class="showcase-tab-btn active" data-tab="tab-performance" role="tab" aria-selected="true" type="button" onclick="window.switchShowcaseTab('tab-performance')">
-                        <span class="tab-icon">⚡</span>
-                        <span class="tab-label">Performance</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-grievances" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-grievances')">
-                        <span class="tab-icon">🎫</span>
-                        <span class="tab-label">Grievances &amp; Tickets</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-analytics" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-analytics')">
-                        <span class="tab-icon">📊</span>
-                        <span class="tab-label">Deflection Analytics</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-genai" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-genai')">
-                        <span class="tab-icon">🧠</span>
-                        <span class="tab-label">GenAI Studio</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-roles" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-roles')">
-                        <span class="tab-icon">🛡️</span>
-                        <span class="tab-label">Roles &amp; RBAC</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-ingestion" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-ingestion')">
-                        <span class="tab-icon">📁</span>
-                        <span class="tab-label">Ingestion Pipeline</span>
-                    </button>
-                    <button class="showcase-tab-btn" data-tab="tab-conversations" role="tab" aria-selected="false" type="button" onclick="window.switchShowcaseTab('tab-conversations')">
-                        <span class="tab-icon">📜</span>
-                        <span class="tab-label">Audit Logs</span>
-                    </button>
-                </div>
+                <div class="home-grid-three">
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">⚡</div>
+                        <h3>Administrative Portal &amp; Telemetry</h3>
+                        <p>Complete control suite: monitor sub-second latency, inspect slowest query traces, track token expenditure, and manage human grievance escalations.</p>
+                        <a href="platform.html" class="highlight-link">Explore Admin Portal &rarr;</a>
+                    </div>
 
-                <!-- TAB 1: BOT PERFORMANCE & TELEMETRY -->
-                <div id="tab-performance" class="showcase-tab-panel active">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Bot Performance &amp; Latency Telemetry</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-performance.png" data-title="Bot Performance &amp; Latency Telemetry">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-performance.png" alt="Bot Performance Telemetry Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Performance Telemetry:</strong> Real-time sub-second latency breakdown, Time-to-First-Token (TTFT), MongoDB Atlas vector recall speeds, cache hit ratios, and slowest query traces.
-                            </div>
-                        </div>
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">🎙️</div>
+                        <h3>Intelligent Production Chatbot</h3>
+                        <p>Delight visitors with hands-free speech-to-text dictation, natural voice playback, verified source citations, and 1-click advisor escalation.</p>
+                        <a href="platform.html#chatbot-showcase" class="highlight-link">View Chatbot Engine &rarr;</a>
+                    </div>
 
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">⚡ Sub-Second TTFT Benchmark</span>
-                                    <span class="pill-card-stat">180ms</span>
-                                </div>
-                                <p>Streaming token responses begin rendering in under 200ms. Live latency waterfall isolates embedding, vector search, LLM inference, and API gateway serialization.</p>
-                            </div>
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">🎓</div>
+                        <h3>Custom Industry Solutions</h3>
+                        <p>Specialized vector pipelines tuned for Higher Education, E-Commerce, SaaS, Healthcare, Finance/Legal, and B2B services.</p>
+                        <a href="solutions.html" class="highlight-link">Browse Industry Solutions &rarr;</a>
+                    </div>
 
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📊 Percentile Latency SLA</span>
-                                    <span class="pill-card-stat">99.98% Uptime</span>
-                                </div>
-                                <p>Track P50, P90, P95, and P99 tail latency distributions with automated threshold alerting and token burn cost tracking.</p>
-                            </div>
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">📁</div>
+                        <h3>Turnkey Ingestion &amp; Full-Stack Services</h3>
+                        <p>We handle end-to-end data crawling, chunking, prompt tuning, script embedding, and ongoing accuracy audits with turnkey delivery.</p>
+                        <a href="services.html" class="highlight-link">View Services &amp; Process &rarr;</a>
+                    </div>
 
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🔍 Slow Query Tracer &amp; Caching</span>
-                                    <span class="pill-card-stat">41.5% Cache Hit</span>
-                                </div>
-                                <p>Inspect complex long-tail queries with deep latency bottleneck analysis, Redis query cache hits, and semantic similarity matching.</p>
-                            </div>
-                        </div>
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">🛡️</div>
+                        <h3>Vector Isolation &amp; Zero Data Leakage</h3>
+                        <p>Dedicated tenant vector indexes, strict deterministic grounding, automated PII redaction, and zero public LLM training guarantee privacy.</p>
+                        <a href="security.html" class="highlight-link">Review Security Standards &rarr;</a>
+                    </div>
+
+                    <div class="highlight-card spotlight-card">
+                        <div class="highlight-icon">👥</div>
+                        <h3>Leadership &amp; Engineering Team</h3>
+                        <p>Led by veteran founders across AI systems engineering, distributed architecture, product design, operations, and enterprise growth.</p>
+                        <a href="about.html" class="highlight-link">Meet Leadership Team &rarr;</a>
                     </div>
                 </div>
-
-                <!-- TAB 2: GRIEVANCES & TICKETS -->
-                <div id="tab-grievances" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Grievance &amp; Support Ticket Escalation</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-grievances.png" data-title="Grievances &amp; Ticket Escalation">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-grievances.png" alt="Grievances and Ticket Escalation Management Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Grievances &amp; Ticket Management:</strong> Automated human handoff from bot sessions, multi-department triage (Finance, Exams, Housing, Admissions), priority queues, and staff resolution workflows.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🎫 Automated Bot-to-Human Handoff</span>
-                                    <span class="pill-card-stat">Zero Dropoff</span>
-                                </div>
-                                <p>When visitors request human assistance or submit negative feedback, a ticket is automatically spawned with full transcript context and student/client metadata.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🏢 Multi-Department Routing</span>
-                                    <span class="pill-card-stat">8 Categories</span>
-                                </div>
-                                <p>Automatically tags and assigns tickets to Examination Cell, Finance &amp; Accounts, Housing, or Registrar staff with priority tiers (Urgent, High, Medium, Low).</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">⏱️ Resolution SLA &amp; Notes</span>
-                                    <span class="pill-card-stat">Audit Ready</span>
-                                </div>
-                                <p>Staff can claim tickets in 1 click, append internal notes, adjust resolution status (Open, In Progress, Resolved, Closed), and track resolution times.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 3: DEFLECTION ANALYTICS -->
-                <div id="tab-analytics" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Analytics &amp; Deflection Telemetry</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-screenshot.png" data-title="Analytics &amp; Deflection Telemetry">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-screenshot.png" alt="Analytics and Deflection Dashboard Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Real-Time Analytics:</strong> Live inquiry volumes, 80%+ deflection rate benchmarks, user sentiment (CSAT) ratings, and top intent categories.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📈 80%+ Automated Deflection</span>
-                                    <span class="pill-card-stat">87.4% Deflected</span>
-                                </div>
-                                <p>Monitor real-time deflection ratios across departments, reducing customer support tickets and repetitive phone calls around the clock.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">⭐ CSAT Sentiment Scorecard</span>
-                                    <span class="pill-card-stat">96.2% Positive</span>
-                                </div>
-                                <p>Real-time aggregation of thumbs up/down feedback and post-chat 5-star satisfaction ratings to quantify user delight.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📊 Hourly &amp; Daily Traffic Trends</span>
-                                    <span class="pill-card-stat">Live Timeline</span>
-                                </div>
-                                <p>Discover peak usage hours, trending student/customer inquiry topics, and export telemetry reports in CSV format.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 4: GEN AI STUDIO -->
-                <div id="tab-genai" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Gen AI Hyperparameters &amp; Model Studio</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-genai.png" data-title="Gen AI Model Studio &amp; Hyperparameters">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-genai.png" alt="Gen AI Settings and Model Tuning Modal Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Gen AI Model Studio:</strong> Multi-LLM model configuration (Llama 3.3, Claude 3.5, Gemini 1.5, Titan Embeddings), system instructions, temperature, top-P, chunking size, and deterministic guardrails.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🧠 Multi-LLM Foundation Models</span>
-                                    <span class="pill-card-stat">Flexible Engine</span>
-                                </div>
-                                <p>Choose between Meta Llama 3.3 70B, Anthropic Claude 3.5 Sonnet, or Google Gemini with Amazon Titan 1024-dimensional embeddings.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🎛️ Hyperparameter Precision</span>
-                                    <span class="pill-card-stat">Hybrid Search</span>
-                                </div>
-                                <p>Calibrate temperature (0.0 to 1.0), top-P, chunk size (3000 chars), overlap size (1000 chars), and hybrid KNN / multi-match search weights.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🛡️ Strict Hallucination Guardrails</span>
-                                    <span class="pill-card-stat">Zero Hallucination</span>
-                                </div>
-                                <p>Custom fallback templates, prompt rewrite assistants, and strict bounding prompts ensuring answers are generated exclusively from verified context.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 5: RBAC & ROLES -->
-                <div id="tab-roles" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Global Roles &amp; Granular Permissions</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-roles.png" data-title="Roles &amp; Access Control Matrix">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-roles.png" alt="Roles and RBAC Settings Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Enterprise RBAC:</strong> Granular role-based access control, widget-level analytics permissions, navigation menu visibility control, and multi-tenant security isolation.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🔐 Role-Based Access Control</span>
-                                    <span class="pill-card-stat">5 Tier Roles</span>
-                                </div>
-                                <p>Enforce strict separation of duties between Super Admins, Tenant Admins, Support Leads, Support Agents, and Read-Only Analysts.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📊 Widget-Level Security</span>
-                                    <span class="pill-card-stat">Granular Scopes</span>
-                                </div>
-                                <p>Control exact widget visibility per role: restrict cost metrics, slow query traces, or transcript exports to authorized team members.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🧭 Dynamic Navigation Menus</span>
-                                    <span class="pill-card-stat">Zero Exposure</span>
-                                </div>
-                                <p>Portal sidebars adapt in real time to each user's assigned role &mdash; unassigned routes and APIs are completely inaccessible.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 6: INGESTION MANAGER -->
-                <div id="tab-ingestion" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Ingestion Manager &amp; Vector Pipeline</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-ingestion.png" data-title="Ingestion Manager &amp; Vector Pipeline">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-ingestion.png" alt="Ingestion Manager Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Ingestion Manager:</strong> Automated web crawling, PDF/manual parsing, vector partition chunking, and live RAG similarity retrieval testing.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🔄 Automated Web Crawlers</span>
-                                    <span class="pill-card-stat">Continuous Sync</span>
-                                </div>
-                                <p>Index full website sitemaps, help center articles, and PDF catalogs with automated weekly recrawling to keep answers current.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🎯 Live Vector Recall Tester</span>
-                                    <span class="pill-card-stat">Cosine &amp; KNN</span>
-                                </div>
-                                <p>Test similarity retrieval scores on test queries before publishing changes live to users, verifying exact source chunks retrieved.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📦 Isolated Vector Partitions</span>
-                                    <span class="pill-card-stat">100% Private</span>
-                                </div>
-                                <p>Each tenant's vector embeddings are strictly partitioned in dedicated MongoDB Atlas vector search indexes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 7: CONVERSATION HISTORY & AUDIT LOGS -->
-                <div id="tab-conversations" class="showcase-tab-panel">
-                    <div class="showcase-tab-grid">
-                        <div class="screen-card portal-card">
-                            <div class="screen-card-header">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic Portal &mdash; Conversation History &amp; Audit Archive</span>
-                                <button class="zoom-hint-btn" data-img="assets/portal-conversations.png" data-title="Conversation History &amp; Audit Trail">🔍 Zoom</button>
-                            </div>
-                            <div class="screen-image-wrap">
-                                <img src="assets/portal-conversations.png" alt="Conversation History and Audit Logs Screenshot" class="showcase-img portal-img zoomable-screenshot" loading="lazy">
-                            </div>
-                            <div class="screen-caption">
-                                <strong>Audit Trail &amp; Transcript Archive:</strong> Complete session timelines, verified citations, user sentiment flags, and full exportable audit logs.
-                            </div>
-                        </div>
-
-                        <div class="showcase-side-cards">
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📜 Turn-by-Turn Audit Logs</span>
-                                    <span class="pill-card-stat">Full Trace</span>
-                                </div>
-                                <p>Inspect exact user prompts, model token outputs, intent triggers, and underlying vector documents cited for every turn.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">🔍 Sentiment &amp; Keyword Filtering</span>
-                                    <span class="pill-card-stat">Instant Search</span>
-                                </div>
-                                <p>Filter conversations by user thumbs feedback, dissatisfaction flags, escalation requests, date range, or keyword queries.</p>
-                            </div>
-
-                            <div class="feature-pill-card">
-                                <div class="pill-card-header">
-                                    <span class="pill-card-title">📥 Compliance Export</span>
-                                    <span class="pill-card-stat">CSV / JSON</span>
-                                </div>
-                                <p>Export sanitized session transcripts for internal compliance, quality assurance auditing, and stakeholder reporting.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- Dedicated End-User Chatbot Feature Showcase Section -->
-        <section id="chatbot-showcase" class="chatbot-showcase-section">
+        <!-- Quick Platform Preview Showcase Banner -->
+        <section class="platform-preview-banner-section" data-reveal="fade-up">
             <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow" style="color: var(--color-accent);">End-User Chatbot Widget</span>
-                    <h2>Intelligent Conversational Experience Built for Engagement</h2>
-                    <p>Equipped with hands-free voice dictation, natural text-to-speech audio, deterministic source citations, and 1-click advisor escalation.</p>
-                </div>
-
-                <div class="chatbot-dual-layout">
-                    <!-- LEFT: Real Full-Size Production Chatbot Widget -->
-                    <div class="chatbot-preview-holder">
-                        <div class="chatbot-widget-showcase">
-                            <div class="chatbot-widget-toolbar">
-                                <div class="traffic-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
-                                </div>
-                                <span class="screen-title">Isomorphic AI &mdash; Live Production Chatbot</span>
-                                <button class="zoom-hint-btn" data-img="assets/chatbot-screenshot.png" data-title="Isomorphic AI Live Chatbot Widget (Full Production Size)">🔍 Zoom</button>
-                            </div>
-                            <div class="chatbot-widget-img-container">
-                                <img src="assets/chatbot-screenshot.png" alt="Isomorphic AI Live Chatbot Widget" class="chatbot-full-img zoomable-screenshot" data-img="assets/chatbot-screenshot.png" data-title="Isomorphic AI Live Chatbot Widget (Full Production Size)" loading="lazy">
-                            </div>
-                            <div class="chatbot-widget-caption">
-                                <strong>Production AI Widget:</strong> 1-line script embed with real-time speech mic, instant audio playback, starter chips, verified citations, and thumbs feedback.
-                            </div>
+                <div class="preview-banner-card spotlight-card">
+                    <div class="preview-banner-content">
+                        <span class="section-eyebrow" style="color: var(--color-gold);">Live Production Suite</span>
+                        <h2>Inspect Real Administrative Telemetry &amp; Widgets</h2>
+                        <p>Explore high-resolution screenshots of our 7 administrative modules: Latency Telemetry, Grievances, Deflection Analytics, GenAI Studio, RBAC, Ingestion Manager, and Audit Logs.</p>
+                        <div class="banner-action-row">
+                            <a href="platform.html" class="btn btn-primary btn-md">Open Platform Tour &rarr;</a>
+                            <a href="contact.html" class="btn btn-outline btn-md">Schedule 1-on-1 Walkthrough</a>
                         </div>
                     </div>
-
-                    <!-- RIGHT: Chatbot Core Feature Matrix (6 Feature Cards) -->
-                    <div class="chatbot-features-grid">
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">🎙️</div>
-                            <h4>Speech-to-Text (STT) Voice Mic</h4>
-                            <p>Visitors can speak naturally using hands-free voice recognition with real-time waveform animation and noise filtering.</p>
-                            <span class="voice-pulse-badge"><span class="voice-pulse-dot"></span> Hands-Free STT</span>
-                        </div>
-
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">🔊</div>
-                            <h4>Natural Text-to-Speech (TTS)</h4>
-                            <p>One-click audio voice playback on any response allows users to listen to complex multi-step instructions on the go.</p>
-                        </div>
-
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">📌</div>
-                            <h4>Deterministic RAG Citations</h4>
-                            <p>Every response displays exact source document references (e.g. <em>Handbook &sect;4.2</em>) with clickable links for verification.</p>
-                        </div>
-
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">👍</div>
-                            <h4>Per-Message CSAT Feedback</h4>
-                            <p>Real-time thumbs up / down sentiment buttons with optional feedback reason collection to constantly refine bot answers.</p>
-                        </div>
-
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">👤</div>
-                            <h4>1-Click Advisor Escalation</h4>
-                            <p>Seamless transfer to human support staff with pre-filled student/visitor details, automatically generating portal tickets.</p>
-                        </div>
-
-                        <div class="cb-feature-box">
-                            <div class="cb-feature-icon">⭐</div>
-                            <h4>5-Star CSAT &amp; Transcript Export</h4>
-                            <p>Interactive session-end survey collecting satisfaction ratings, with 1-click support transcript PDF/text download.</p>
-                        </div>
+                    <div class="preview-banner-image-wrap">
+                        <img src="assets/portal-screenshot.png" alt="Isomorphic Admin Portal Preview" class="preview-banner-img zoomable-screenshot" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Core Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">What We Deliver</span>
-                    <h2>Full-Stack Conversational AI Services</h2>
-                    <p>We handle end-to-end data engineering, prompt design, widget embedding, and continuous accuracy monitoring for your organization.</p>
-                </div>
-
-                <div class="services-grid-six">
-                    <div class="service-box">
-                        <div class="service-icon">📁</div>
-                        <h3>Proprietary Ingestion &amp; RAG</h3>
-                        <p>We index your website URLs, Notion databases, support tickets, and PDF catalogs into private vector search with verified citations.</p>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-icon">🎙️</div>
-                        <h3>Voice &amp; Web Widget Embed</h3>
-                        <p>A fast, 1-line embed script equipped with Speech-to-Text voice mic, natural Text-to-Speech audio playback, and quick-reply chips.</p>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-icon">📊</div>
-                        <h3>Admin Portal &amp; Telemetry</h3>
-                        <p>Dedicated dashboard to monitor conversation telemetry, view deflection metrics, inspect session sentiment, and update rules.</p>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-icon">🛡️</div>
-                        <h3>Strict Guardrails &amp; Safety</h3>
-                        <p>Custom safety boundaries to eliminate hallucinations, prevent prompt injection, and guarantee 99.9% uptime reliability.</p>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-icon">🔄</div>
-                        <h3>Automated Weekly Crawlers</h3>
-                        <p>Continuous synchronization with your knowledge bases, sitemaps, and help center articles to keep answers constantly up to date.</p>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-icon">📝</div>
-                        <h3>Lead Capture &amp; CSAT Surveys</h3>
-                        <p>Interactive session-end surveys that collect visitor emails, phone numbers, and 5-star satisfaction ratings directly into your CRM.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Industry Solutions Section -->
-        <section id="solutions" class="solutions-section">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Industry Solutions</span>
-                    <h2>Tailored For Any Business Workflow</h2>
-                    <p>Our custom vector pipelines are tuned specifically for the specialized vocabulary, compliance standards, and workflows of your sector.</p>
-                </div>
-
-                <div class="solutions-grid-three">
-                    <div class="solution-card">
-                        <div class="sol-icon">🎓</div>
-                        <h4>Higher Education &amp; Student Services</h4>
-                        <p>Automate student inquiries across admissions, financial aid (FAFSA), registrar deadlines, academic advising, and campus IT support.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="sol-icon">🛍️</div>
-                        <h4>E-Commerce &amp; Retail</h4>
-                        <p>Handle order tracking, size advice, return policies, and product recommendations 24/7 without support agent bottlenecks.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="sol-icon">💻</div>
-                        <h4>SaaS &amp; Tech Platforms</h4>
-                        <p>Answer complex API questions, troubleshoot error codes, and onboard trial users with verified documentation citations.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="sol-icon">🏥</div>
-                        <h4>Healthcare &amp; Clinics</h4>
-                        <p>Triage non-emergency patient FAQs, provide clinic directions, and direct visitors to verified scheduling portals.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="sol-icon">⚖️</div>
-                        <h4>Finance, Legal &amp; Compliance</h4>
-                        <p>Strictly compliant, zero-hallucination document search with automated citations to official clauses, contracts, and terms.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="sol-icon">🏢</div>
-                        <h4>B2B Agencies &amp; Enterprise Services</h4>
-                        <p>Qualify inbound website prospects, capture booking details, and present portfolio case studies around the clock.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="process" class="process-section">
+        <!-- Turnkey 4-Step Process Section -->
+        <section class="process-section" data-reveal="fade-up">
             <div class="container">
                 <div class="section-title-wrap">
                     <span class="section-eyebrow">Turnkey Deployment</span>
@@ -786,22 +261,22 @@
                 </div>
 
                 <div class="process-steps-four">
-                    <div class="step-card">
+                    <div class="step-card spotlight-card">
                         <div class="step-num">01</div>
                         <h3>Share Your Sources</h3>
                         <p>Provide your documentation URLs, PDFs, or FAQs. We structure and index your knowledge base.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card spotlight-card">
                         <div class="step-num">02</div>
                         <h3>Calibrate Rules &amp; Voice</h3>
                         <p>We configure custom prompts, brand tone, safety filters, voice synthesis, and lead capture surveys.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card spotlight-card">
                         <div class="step-num">03</div>
                         <h3>Embed 1 Line of Code</h3>
                         <p>Paste a single lightweight script tag onto your website, LMS, WordPress, Shopify, or custom stack.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card spotlight-card">
                         <div class="step-num">04</div>
                         <h3>Audit &amp; Scale</h3>
                         <p>Monitor conversation deflection, track CSAT ratings, and update Q&amp;A rules live in your admin portal.</p>
@@ -810,255 +285,85 @@
             </div>
         </section>
 
-        <!-- Security & Compliance Section -->
-        <section id="security" class="security-section">
+        <!-- Bottom CTA Banner Section -->
+        <section class="cta-banner-section" data-reveal="fade-up">
             <div class="container">
-                <div class="security-card">
-                    <div class="security-content">
-                        <span class="section-eyebrow" style="color: var(--color-accent);">Enterprise Security</span>
-                        <h2>Zero Data Leakage. 100% Isolated Tenants.</h2>
-                        <p>We treat your proprietary organizational data and customer conversations with the highest standard of privacy and security.</p>
-                        
-                        <div class="security-features-list">
-                            <div class="sec-item">
-                                <strong>🔒 Isolated Vector Tenants:</strong> Your files and user queries are stored in private database containers and never shared across instances.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🚫 No Public LLM Training:</strong> Your documents and logs are strictly protected and never used to train public foundation models.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🎯 Deterministic Grounding:</strong> The chatbot is mathematically constrained to only cite facts from your approved knowledge files.
-                            </div>
-                            <div class="sec-item">
-                                <strong>🛡️ Automated PII Redaction:</strong> Personal identifiers, student/customer IDs, and sensitive tokens are masked before logs are archived.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq-section">
-            <div class="container faq-container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Common Questions</span>
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about our custom AI chatbot services and platform capabilities.</p>
-                </div>
-
-                <div class="faq-accordion">
-                    <div class="faq-item active">
-                        <button type="button" class="faq-question">
-                            <span>How does Isomorphic eliminate AI hallucinations?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We use deterministic Retrieval-Augmented Generation (RAG). The chatbot is locked to retrieve facts only from your indexed documentation and verified URLs, attaching exact source citations to every statement.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question">
-                            <span>How fast can our custom chatbot be deployed?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Most client instances are configured, tested, and live within 48 to 72 hours. Simply provide your website link or documents, and our engineering team handles the rest.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question">
-                            <span>Can we customize the chatbot branding, colors, and voice?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes. Primary colors, logos, starter quick-reply chips, speech-to-text dictation, text-to-speech audio, and session-end survey forms are fully customizable via your portal.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question">
-                            <span>Can the chatbot be tailored to our specific industry?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes. We deploy specialized assistants for universities, e-commerce stores, SaaS companies, healthcare clinics, and B2B enterprises—each calibrated with custom terminology and routing rules.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question">
-                            <span>How is our proprietary data secured and kept private?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Each organization receives dedicated vector isolation. Your data is encrypted at rest and in transit, never shared across tenants, and never used to train any third-party foundation model.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question">
-                            <span>Can the chatbot integrate with our existing CRM and helpdesk?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes. We support webhooks and native connectors to push leads, conversation transcripts, and CSAT survey responses directly into HubSpot, Salesforce, Zendesk, Slack, or your custom database.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Meet The Founders Section (Placed before Contact) -->
-        <section id="founders" class="founders-section">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Leadership</span>
-                    <h2>Meet The Founders</h2>
-                    <p>The core leadership team behind Isomorphic.</p>
-                </div>
-
-                <div class="founders-grid">
-                    <!-- Founder 1: CEO -->
-                    <div class="founder-card">
-                        <div class="founder-avatar-wrap">
-                            <img src="assets/shubhang.jpeg" alt="Shubhang Sharma" class="founder-avatar-img" />
-                            <div class="dummy-avatar-bg" style="display: none;">
-                                <span class="founder-initials">SS</span>
-                            </div>
-                        </div>
-                        <h3 class="founder-name">Shubhang Sharma</h3>
-                        <span class="founder-role">CEO</span>
-                        <p class="founder-bio">Guiding enterprise vision, overall corporate strategy, and conversational AI solution delivery across industries.</p>
-                    </div>
-
-                    <!-- Founder 2: CTO -->
-                    <div class="founder-card">
-                        <div class="founder-avatar-wrap">
-                            <img src="assets/shivam.png" alt="Shivam Jadon" class="founder-avatar-img" />
-                            <div class="dummy-avatar-bg" style="display: none;">
-                                <span class="founder-initials">SJ</span>
-                            </div>
-                        </div>
-                        <h3 class="founder-name">Shivam Jadon</h3>
-                        <span class="founder-role">CTO</span>
-                        <p class="founder-bio">Directing full-stack systems engineering, high-throughput RAG vector indexing, and real-time middleware architecture.</p>
-                    </div>
-
-                    <!-- Founder 3: CPO -->
-                    <div class="founder-card">
-                        <div class="founder-avatar-wrap">
-                            <img src="assets/ankit.png" alt="Ankit Rathore" class="founder-avatar-img" />
-                            <div class="dummy-avatar-bg" style="display: none;">
-                                <span class="founder-initials">AR</span>
-                            </div>
-                        </div>
-                        <h3 class="founder-name">Ankit Rathore</h3>
-                        <span class="founder-role">CPO</span>
-                        <p class="founder-bio">Leading product management, user experience design, and conversational workflow innovation.</p>
-                    </div>
-
-                    <!-- Founder 4: COO -->
-                    <div class="founder-card">
-                        <div class="founder-avatar-wrap">
-                            <img src="assets/gaurav.jpeg" alt="Gaurav Sharma" class="founder-avatar-img" />
-                            <div class="dummy-avatar-bg" style="display: none;">
-                                <span class="founder-initials">GS</span>
-                            </div>
-                        </div>
-                        <h3 class="founder-name">Gaurav Sharma</h3>
-                        <span class="founder-role">COO</span>
-                        <p class="founder-bio">Overseeing corporate operations, legal frameworks, data compliance standards, and enterprise execution.</p>
-                    </div>
-
-                    <!-- Founder 5: CRO -->
-                    <div class="founder-card">
-                        <div class="founder-avatar-wrap">
-                            <img src="assets/kaushal.png" alt="Kaushal Tomar" class="founder-avatar-img" />
-                            <div class="dummy-avatar-bg" style="display: none;">
-                                <span class="founder-initials">KT</span>
-                            </div>
-                        </div>
-                        <h3 class="founder-name">Kaushal Tomar</h3>
-                        <span class="founder-role">CRO</span>
-                        <p class="founder-bio">Leading revenue operations, business development, strategic partnerships, and commercial client expansion.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & Lead Capture Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="contact-card">
-                    <div class="contact-header">
-                        <span class="section-eyebrow" style="color: var(--color-accent-light);">Get In Touch</span>
-                        <h2>Ready to Launch Your Custom Chatbot?</h2>
-                        <p>Tell us about your project requirements. Our engineering team will prepare a personalized preview instance trained on your website data.</p>
-                    </div>
-
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="c-name">Full Name</label>
-                                <input type="text" id="c-name" placeholder="Aarav Sharma" required autocomplete="name">
-                            </div>
-                            <div class="form-field">
-                                <label for="c-email">Work Email</label>
-                                <input type="email" id="c-email" placeholder="aarav.sharma@company.in" required autocomplete="email">
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="c-website">Website URL or Documentation Link</label>
-                            <input type="url" id="c-website" placeholder="https://www.yourcompany.com" required autocomplete="url">
-                        </div>
-
-                        <div class="form-field">
-                            <label for="c-message">How can our AI chatbot help your business?</label>
-                            <textarea id="c-message" rows="3" placeholder="e.g. We want to automate customer support deflection for billing and product questions..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-secondary btn-full btn-lg">
-                            Request Custom Consultation &rarr;
-                        </button>
-                    </form>
-
-                    <div id="contact-success" class="contact-success-msg">
-                        <div class="success-check">✓</div>
-                        <h3>Thank You!</h3>
-                        <p>Your request has been received. Our team will review your website and contact you within 24 hours.</p>
-                        <p class="direct-mail">Direct inquiries: <a href="mailto:help@isomorphic.in" style="color:#FFFFFF; font-weight:600;">help@isomorphic.in</a></p>
+                <div class="cta-banner-box">
+                    <h2>Ready to Experience Isomorphic for Your Organization?</h2>
+                    <p>Get a personalized preview instance trained on your website data within 24 hours.</p>
+                    <div class="cta-buttons-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Request Custom Consultation &rarr;</a>
+                        <a href="platform.html" class="btn btn-outline btn-lg">View Live Showcase</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Clean Footer -->
+    <!-- Clean Minimal Balanced Footer -->
     <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <a href="#" class="logo" style="color:#FFFFFF;" aria-label="Isomorphic">
-                    <img src="assets/isomorphic-icon.png" alt="Isomorphic Emblem" class="site-logo-icon" width="22" height="22">
-                    <span style="color:#FFFFFF;">isomorphic<span class="dot-in">.in</span></span>
-                </a>
-                <p>Enterprise Conversational AI Systems &amp; Managed Platform.</p>
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Column 1: Brand & Status -->
+                <div class="footer-col-brand">
+                    <a href="index.html" class="logo" aria-label="Isomorphic">
+                        <img src="assets/isomorphic-icon.png" alt="Isomorphic Emblem" class="site-logo-icon" width="24" height="24">
+                        <span>isomorphic<span class="dot-in">.in</span></span>
+                    </a>
+                    <p class="footer-brand-desc">Enterprise Conversational AI Systems &amp; Managed Platform. Bespoke RAG pipelines engineered with zero hallucinations.</p>
+                    <div class="footer-status-pill">
+                        <span class="status-dot-green"></span>
+                        <span>Systems Operational</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation Links -->
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Platform Navigation</h4>
+                    <div class="footer-nav-links-grid">
+                        <a href="index.html">Home</a>
+                        <a href="platform.html">Admin Portal</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="services.html">Services &amp; Process</a>
+                        <a href="security.html">Security &amp; RBAC</a>
+                        <a href="about.html">About &amp; Team</a>
+                        <a href="contact.html">Contact &amp; FAQ</a>
+                        <a href="contact.html">Book a Demo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Inquiries & Support -->
+                <div class="footer-col-contact">
+                    <h4 class="footer-col-title">Enterprise Support</h4>
+                    <div class="footer-contact-card">
+                        <a href="mailto:help@isomorphic.in" class="footer-email-link">
+                            <span>✉️ help@isomorphic.in</span>
+                        </a>
+                        <p>Dedicated technical engineering support for enterprise clients.</p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-right">
-                <a href="mailto:help@isomorphic.in">help@isomorphic.in</a>
-                <span>&copy; 2026 Isomorphic. All rights reserved.</span>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 Isomorphic AI. All rights reserved.</span>
+                <span>Deterministic Grounding &bull; 100% Vector Isolation</span>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
 
     <!-- High-Resolution Screenshot Lightbox Modal -->
     <div id="screenshot-lightbox" class="screenshot-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="lightbox-wrapper">
             <div class="lightbox-header">
-                <span id="lightbox-title" class="lightbox-title">Isomorphic Administrative Portal</span>
+                <span id="lightbox-title" class="lightbox-title">Isomorphic Portal Screenshot</span>
                 <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
             </div>
             <div class="lightbox-body">
@@ -1067,59 +372,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=6.0"></script>
-
-    <!-- Self-Contained Resilient Tab Switcher & Lightbox -->
-    <script>
-    (function() {
-        function activateTab(tabId) {
-            if (!tabId) return;
-            var buttons = document.querySelectorAll('.showcase-tab-btn');
-            var panels = document.querySelectorAll('.showcase-tab-panel');
-
-            buttons.forEach(function(btn) {
-                var isMatch = btn.getAttribute('data-tab') === tabId;
-                if (isMatch) {
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-selected', 'true');
-                } else {
-                    btn.classList.remove('active');
-                    btn.setAttribute('aria-selected', 'false');
-                }
-            });
-
-            panels.forEach(function(panel) {
-                var isMatch = panel.getAttribute('id') === tabId;
-                if (isMatch) {
-                    panel.classList.add('active');
-                    panel.style.setProperty('display', 'block', 'important');
-                } else {
-                    panel.classList.remove('active');
-                    panel.style.setProperty('display', 'none', 'important');
-                }
-            });
-        }
-
-        window.switchShowcaseTab = activateTab;
-
-        document.addEventListener('click', function(e) {
-            var btn = e.target.closest('.showcase-tab-btn');
-            if (btn) {
-                e.preventDefault();
-                var tabId = btn.getAttribute('data-tab');
-                if (tabId) {
-                    activateTab(tabId);
-                }
-            }
-        });
-    })();
-    </script>
-
-    <!-- Hosted Live Chatbot Widget Script -->
-    <script 
-        src="https://iso-chat.onrender.com/chatbot.js" 
-        data-tenant-id="onestop" 
-        data-bot-id="isobot">
-    </script>
+    <script src="script.js?v=19.0"></script>
 </body>
 </html>

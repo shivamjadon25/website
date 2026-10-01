@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/isomorphic-icon.png">
-    <title>Page Not Found | Isomorphic AI</title>
-    <meta name="description" content="The page you are looking for could not be found. Return to Isomorphic AI homepage.">
+    <title>Page Not Found | Isomorphic</title>
+    <meta name="description" content="The page you are looking for could not be found. Return to Isomorphic homepage.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=3.1">
+    <link rel="stylesheet" href="styles.css?v=19.0">
 </head>
 <body>
+    <!-- Luxury Animated Ambient Aurora Background & Grid -->
+    <div class="ambient-aurora-bg" aria-hidden="true">
+        <div class="aurora-grid-pattern"></div>
+        <div class="aurora-glow aurora-1"></div>
+        <div class="aurora-glow aurora-2"></div>
+        <div class="aurora-glow aurora-3"></div>
+    </div>
 
     <!-- Minimal Header Navigation -->
     <header class="site-header" id="navbar">
@@ -24,14 +31,13 @@
             </a>
 
             <nav class="nav-links" id="nav-menu">
-                <a href="index.html#platform">Platform</a>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#solutions">Solutions</a>
-                <a href="index.html#process">How It Works</a>
-                <a href="index.html#security">Security</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="index.html#founders">Leadership</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="platform.html">Platform</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="services.html">Services</a>
+                <a href="security.html">Security</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
             <div class="nav-actions">
@@ -49,7 +55,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="page-content">
         <!-- Error Content Section -->
         <section class="error-section">
             <div class="container">
@@ -72,7 +78,7 @@
                         <a href="index.html" class="btn btn-primary btn-md">
                             &larr; Return to Homepage
                         </a>
-                        <a href="index.html#contact" class="btn btn-secondary btn-md">
+                        <a href="contact.html" class="btn btn-secondary btn-md">
                             Contact Support &rarr;
                         </a>
                     </div>
@@ -89,30 +95,64 @@
         </section>
     </main>
 
-    <!-- Clean Footer -->
+    <!-- Symmetrical 3-Column Luxury Footer -->
     <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <a href="index.html" class="logo" style="color:#FFFFFF;" aria-label="Isomorphic">
-                    <img src="assets/isomorphic-icon.png" alt="Isomorphic Emblem" class="site-logo-icon" width="22" height="22">
-                    <span style="color:#FFFFFF;">isomorphic<span class="dot-in">.in</span></span>
-                </a>
-                <p>Enterprise Conversational AI Systems &amp; Managed Platform.</p>
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Column 1: Identity & Description -->
+                <div class="footer-col-brand">
+                    <a href="index.html" class="logo" aria-label="Isomorphic">
+                        <img src="assets/isomorphic-icon.png" alt="Isomorphic Emblem" class="site-logo-icon" width="24" height="24">
+                        <span>isomorphic<span class="dot-in">.in</span></span>
+                    </a>
+                    <p class="footer-brand-desc">Enterprise Conversational AI Systems &amp; Managed Platform. Bespoke RAG pipelines engineered with zero hallucinations.</p>
+                    <div class="footer-status-pill">
+                        <span class="status-dot-green"></span>
+                        <span>Systems Operational</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation Links Grid -->
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Platform Navigation</h4>
+                    <div class="footer-nav-links-grid">
+                        <a href="index.html">Home</a>
+                        <a href="platform.html">Admin Portal</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="services.html">Services &amp; Process</a>
+                        <a href="security.html">Security &amp; RBAC</a>
+                        <a href="about.html">About &amp; Team</a>
+                        <a href="contact.html">Contact &amp; FAQ</a>
+                        <a href="contact.html">Book a Demo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Inquiries & Support -->
+                <div class="footer-col-contact">
+                    <h4 class="footer-col-title">Enterprise Support</h4>
+                    <div class="footer-contact-card">
+                        <a href="mailto:help@isomorphic.in" class="footer-email-link">
+                            <span>✉️ help@isomorphic.in</span>
+                        </a>
+                        <p>Dedicated technical engineering support for enterprise clients.</p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-right">
-                <a href="mailto:help@isomorphic.in">help@isomorphic.in</a>
-                <span>&copy; 2026 Isomorphic. All rights reserved.</span>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 Isomorphic AI. All rights reserved.</span>
+                <span>Deterministic Grounding &bull; 100% Vector Isolation</span>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=3.1"></script>
+    <script src="script.js?v=19.0"></script>
 
     <!-- Error Parameter & Telemetry Script -->
     <script>
         (function() {
             try {
-                // Populate path and timestamp
                 var pathEl = document.getElementById("telemetry-path");
                 var timeEl = document.getElementById("telemetry-time");
                 var refEl = document.getElementById("telemetry-ref");
@@ -124,12 +164,11 @@
                     refEl.textContent = randRef;
                 }
 
-                // Check for custom status codes in URL query params (?code=500, ?code=503, etc.)
                 var params = new URLSearchParams(window.location.search);
                 var code = params.get("code") || params.get("status");
                 
                 if (code === "500" || code === "502" || code === "503") {
-                    document.title = "Service Interruption | Isomorphic AI";
+                    document.title = "Service Interruption | Isomorphic";
                     var badge = document.getElementById("error-badge-text");
                     var heading = document.getElementById("error-heading");
                     var message = document.getElementById("error-message");
