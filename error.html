@@ -3,198 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <title>Service Notice | Isomorphic AI</title>
+    <meta name="description" content="System notice and recovery page for Isomorphic AI services.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" href="assets/isomorphic-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <title>Service Notice | Isomorphic</title>
-    <meta name="description" content="System notice and recovery page for Isomorphic AI services.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=22.0">
-</head>
-<body>
-    <!-- Luxury Animated Ambient Aurora Background & Grid -->
-    <div class="ambient-aurora-bg" aria-hidden="true">
-        <div class="aurora-grid-pattern"></div>
-        <div class="aurora-glow aurora-1"></div>
-        <div class="aurora-glow aurora-2"></div>
-        <div class="aurora-glow aurora-3"></div>
-    </div>
 
-    <!-- Minimal Header Navigation -->
-    <header class="site-header" id="navbar">
-        <div class="container nav-container">
-                        <a href="index.html" class="logo" aria-label="Isomorphic Home">
-                <img src="assets/isomorphic-logo.png" alt="Isomorphic" class="site-logo-img" width="145" height="32">
+    <!-- Fonts Preload -->
+    <link rel="preload" href="assets/fonts/MatterUprights-VF.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/SeasonMixVFUprights.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-matter" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- Sticky Frosted Header -->
+    <header class="sarvam-header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-brand" aria-label="Isomorphic AI Home">
+                <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="header-logo-img">
             </a>
 
-            <nav class="nav-links" id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="platform.html">Platform</a>
-                <a href="solutions.html">Solutions</a>
-                <a href="services.html">Services</a>
-                <a href="security.html">Security</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+            <nav class="header-nav" aria-label="Main Navigation">
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Products</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Production Chatbots</span>
+                            <span class="dropdown-link-desc">Zero-hallucination RAG chatbots trained on your docs</span>
+                        </a>
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Voice Support Agents</span>
+                            <span class="dropdown-link-desc">Sub-300ms conversational voice with native accents</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">In-Chatbot Ticketing</span>
+                            <span class="dropdown-link-desc">Native grievance logging with automated human escalation</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">Tenant Admin Portal</span>
+                            <span class="dropdown-link-desc">Multi-tenant telemetry, analytics, and token auditing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Platform</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Admin Portal Suite</span>
+                            <span class="dropdown-link-desc">Telemetry, token tracking and user roles</span>
+                        </a>
+                        <a href="index.html#stack" class="dropdown-link">
+                            <span class="dropdown-link-title">Vector Isolation</span>
+                            <span class="dropdown-link-desc">Dedicated tenant schemas with zero data leakage</span>
+                        </a>
+                        <a href="index.html#apis" class="dropdown-link">
+                            <span class="dropdown-link-title">Developer APIs</span>
+                            <span class="dropdown-link-desc">Clean REST endpoints for chat, ingest, and voice</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Security &amp; Governance</span>
+                            <span class="dropdown-link-desc">SOC 2 Type II, ISO 27001, and RBAC controls</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Solutions</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Financial Services &amp; Banking</span>
+                            <span class="dropdown-link-desc">Strict compliance, KYC assist, and loan querying</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">E-Commerce &amp; Retail</span>
+                            <span class="dropdown-link-desc">Order tracking, return triage, and cart recovery</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Enterprise IT &amp; Support</span>
+                            <span class="dropdown-link-desc">Automated ticket deflection and internal wiki search</span>
+                        </a>
+                        <a href="services.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Turnkey Implementation</span>
+                            <span class="dropdown-link-desc">48-hour SLA deployment, custom chunking &amp; tuning</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Company</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="about.html" class="dropdown-link">
+                            <span class="dropdown-link-title">About &amp; Team</span>
+                            <span class="dropdown-link-desc">Our mission and founding leadership</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Trust &amp; Security</span>
+                            <span class="dropdown-link-desc">Data residency and privacy guarantees</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Contact Us</span>
+                            <span class="dropdown-link-desc">Speak with our founding engineering team</span>
+                        </a>
+                    </div>
+                </div>
             </nav>
 
-            <div class="nav-actions">
-                <a href="index.html" class="btn btn-secondary btn-sm">
-                    &larr; Back to Home
+            <div class="header-actions">
+                <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-ghost" style="padding: 8px 18px;">
+                    <span>Client Portal</span>
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu" type="button">
-                    <span class="toggle-bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
+                <a href="contact.html" class="blur-btn blur-btn-primary" style="padding: 8px 18px;">
+                    <span class="blur-btn-glow"></span>
+                    <span>Book a Demo</span>
+                </a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle Navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <main id="page-content">
-        <!-- Error Content Section -->
-        <section class="error-section">
-            <div class="container">
-                <div class="error-card">
-                    
-                    <div class="error-code-badge" id="error-badge">
-                        <span class="error-code-dot"></span>
-                        <span id="error-badge-text">Notice &bull; Temporary Interruption</span>
-                    </div>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="platform.html" class="mobile-nav-link">Platform &amp; Portal</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="security.html" class="mobile-nav-link">Security</a>
+        <a href="about.html" class="mobile-nav-link">About &amp; Team</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+            <a href="contact.html" class="blur-btn blur-btn-primary blur-btn-lg" style="text-align: center;">Book a Demo</a>
+            <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-outline blur-btn-lg" style="text-align: center;">Client Login</a>
+        </div>
+    </div>
 
-                    <h1 class="error-title" id="error-heading">
-                        Something unexpected occurred.
-                    </h1>
-
-                    <p class="error-description" id="error-message">
-                        We encountered an unexpected condition while processing your request. Please return to the homepage or reach out to our team if this persists.
-                    </p>
-
-                    <div class="error-actions">
-                        <a href="index.html" class="btn btn-primary btn-md">
-                            &larr; Return to Homepage
-                        </a>
-                        <a href="contact.html" class="btn btn-secondary btn-md">
-                            Contact Support &rarr;
-                        </a>
-                    </div>
-
-                    <!-- Monospace Diagnostics Telemetry -->
-                    <div class="error-telemetry">
-                        <div><strong>Path:</strong> <span id="telemetry-path">/</span></div>
-                        <div><strong>Timestamp:</strong> <span id="telemetry-time"></span></div>
-                        <div><strong>Reference ID:</strong> <span id="telemetry-ref"></span></div>
-                    </div>
-
-                </div>
+    <!-- Main Content -->
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 140px 24px 80px; position: relative;">
+        <div class="hero-ambient-glow" aria-hidden="true" style="top: 30%;"></div>
+        <div class="container-wide" style="text-align: center; max-width: 640px; position: relative; z-index: 2;">
+            <div class="hero-tag-pill" style="margin: 0 auto 1.5rem auto; border-color: rgba(245, 158, 11, 0.25); background: rgba(245, 158, 11, 0.05); color: #d97706;">
+                <span class="tag-dot" style="background: #f59e0b; box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);"></span>
+                <span>HTTP 500 &bull; Temporary Service Notice</span>
             </div>
-        </section>
+            <h1 class="font-season" style="font-size: clamp(64px, 10vw, 100px); font-weight: 400; line-height: 1; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                500
+            </h1>
+            <h2 class="font-season italic-serif" style="font-size: clamp(24px, 3.5vw, 32px); font-weight: 400; color: var(--color-sr-indigo-700); margin-bottom: 16px;">
+                Service Temporarily Paused
+            </h2>
+            <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 32px;">
+                Our distributed inference clusters are performing standard maintenance. Vector partitions remain encrypted, healthy, and secure.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="index.html" class="blur-btn blur-btn-primary">
+                    <span class="blur-btn-glow"></span>
+                    <span>Return to Homepage</span>
+                </a>
+                <a href="contact.html" class="blur-btn blur-btn-outline">
+                    <span>Contact Technical Support</span>
+                </a>
+            </div>
+        </div>
     </main>
 
-    <!-- Symmetrical 3-Column Luxury Footer -->
-    <footer class="site-footer">
-        <div class="container">
+    <!-- Global Footer -->
+    <footer class="sarvam-footer" style="margin-top: auto;">
+        <div class="container-wide">
             <div class="footer-top-grid">
-                <!-- Column 1: Brand & Social Links -->
-                <div class="footer-col-brand">
-                    <a href="index.html" class="footer-logo" aria-label="Isomorphic">
-                        <img src="assets/isomorphic-logo-light.png" alt="Isomorphic" class="footer-logo-img" width="138" height="30">
+                <!-- Brand Column -->
+                <div class="footer-brand-col">
+                    <a href="index.html">
+                        <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="footer-logo-img" style="height: 28px; width: auto;">
                     </a>
-                    <p class="footer-brand-desc">24/7 customer intelligence at scale. Enterprise RAG conversational AI engineered with zero hallucinations.</p>
-                    <div class="footer-social-links" aria-label="Social Media Profiles">
-                        <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.01-3.28 1.64 1.64 0 0 0 .01 3.28M5.07 18.5h2.78v-8.37H5.07v8.37Z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)" title="X (Twitter)">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/isomorphic.in?stkn=MW1mcmFtYzU5aGZqMw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/share/1C6zvKg7ZN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
+                    <p class="footer-tagline">24/7 customer intelligence at scale</p>
+
+                    <div class="footer-compliance-badges">
+                        <div class="compliance-badge-tile" title="ISO 27001 Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-iso.png" alt="ISO Certified">
+                        </div>
+                        <div class="compliance-badge-tile" title="SOC 2 Type II Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-soc2.png" alt="SOC 2 Type II">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Navigation Links Grid -->
-                <div class="footer-col-links">
-                    <h4 class="footer-col-title">Platform Navigation</h4>
-                    <div class="footer-nav-links-grid">
-                        <a href="index.html">Home</a>
-                        <a href="platform.html">Admin Portal</a>
-                        <a href="solutions.html">Solutions</a>
-                        <a href="services.html">Services &amp; Process</a>
-                        <a href="security.html">Security &amp; RBAC</a>
-                        <a href="about.html">About &amp; Team</a>
-                        <a href="contact.html">Contact &amp; FAQ</a>
-                        <a href="contact.html">Book a Demo &rarr;</a>
+                <!-- Link Columns -->
+                <div class="footer-links-grid">
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Products</span>
+                        <a href="index.html#playground" class="footer-link">Production Chatbots</a>
+                        <a href="index.html#playground" class="footer-link">Voice Support Agents</a>
+                        <a href="index.html#cowork" class="footer-link">In-Chatbot Ticketing</a>
+                        <a href="index.html#cowork" class="footer-link">Tenant Admin Portal</a>
+                        <a href="index.html#playground" class="footer-link">Knowledge Ingestion</a>
                     </div>
-                </div>
 
-                <!-- Column 3: Inquiries & Support -->
-                <div class="footer-col-contact">
-                    <h4 class="footer-col-title">Enterprise Support</h4>
-                    <div class="footer-contact-card">
-                        <a href="mailto:help@isomorphic.in" class="footer-email-link">
-                            <span>✉️ help@isomorphic.in</span>
-                        </a>
-                        <p>Dedicated technical engineering support for enterprise clients.</p>
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Platform</span>
+                        <a href="platform.html" class="footer-link">Admin Portal</a>
+                        <a href="index.html#stack" class="footer-link">Vector Isolation</a>
+                        <a href="index.html#apis" class="footer-link">Developer APIs</a>
+                        <a href="security.html" class="footer-link">Security &amp; Governance</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Solutions</span>
+                        <a href="solutions.html" class="footer-link">Financial Services</a>
+                        <a href="solutions.html" class="footer-link">E-Commerce</a>
+                        <a href="solutions.html" class="footer-link">Enterprise IT</a>
+                        <a href="services.html" class="footer-link">Turnkey Services</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Company</span>
+                        <a href="about.html" class="footer-link">About &amp; Team</a>
+                        <a href="security.html" class="footer-link">Trust Center</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="contact.html" class="footer-link">Book a Demo</a>
+                        <a href="index.html" class="footer-link">Brand Assets</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Legal</span>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Data Processing Addendum</a>
+                        <a href="security.html" class="footer-link">Security Disclosures</a>
                     </div>
                 </div>
             </div>
 
             <!-- Footer Bottom Bar -->
             <div class="footer-bottom-bar">
-                <span>&copy; 2026 Isomorphic AI. All rights reserved.</span>
-                <span>Deterministic Grounding &bull; 100% Vector Isolation</span>
+                <div>
+                    &copy; 2026 Isomorphic AI (isomorphic.in). All rights reserved.
+                </div>
+
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener" class="footer-social-icon" aria-label="X / Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/isomorphic.in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=19.0"></script>
+    <!-- Discreet Cookie Consent Toast -->
+    <div class="cookie-consent-bar" id="cookieConsentBar">
+        <div>We use cookies to analyze site usage and optimize your experience on Isomorphic AI.</div>
+        <div class="cookie-consent-btns">
+            <button type="button" class="blur-btn blur-btn-primary" id="cookieAcceptBtn" style="padding: 6px 16px; font-size: 12px;">Accept</button>
+        </div>
+    </div>
 
-    <!-- Error Parameter & Telemetry Script -->
-    <script>
-        (function() {
-            try {
-                var pathEl = document.getElementById("telemetry-path");
-                var timeEl = document.getElementById("telemetry-time");
-                var refEl = document.getElementById("telemetry-ref");
-                
-                if (pathEl) pathEl.textContent = window.location.pathname + window.location.search;
-                if (timeEl) timeEl.textContent = new Date().toUTCString();
-                if (refEl) {
-                    var randRef = "iso_err_" + Math.random().toString(36).substring(2, 9) + "_" + Date.now().toString(36);
-                    refEl.textContent = randRef;
-                }
-
-                var params = new URLSearchParams(window.location.search);
-                var code = params.get("code") || params.get("status");
-                
-                if (code) {
-                    var badge = document.getElementById("error-badge-text");
-                    if (badge) badge.textContent = "HTTP " + code + " • System Notice";
-                }
-            } catch(e) {}
-        })();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

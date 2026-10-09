@@ -3,381 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <title>Services &amp; Turnkey Process | Isomorphic AI</title>
+    <meta name="description" content="Explore our full-stack conversational AI services: RAG knowledge ingestion, voice widgets, admin portals, guardrails, automated sync, and turnkey deployment in 48 hours.">
+    <link rel="canonical" href="https://isomorphic.in/services.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" href="assets/isomorphic-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <title>Services &amp; Turnkey Process | Isomorphic</title>
-    <meta name="description" content="Explore our full-stack conversational AI services: RAG data ingestion, voice widgets, admin portals, guardrails, automated sync, and turnkey deployment in 48 hours.">
-    
-    <!-- SEO & Indexing Meta Tags -->
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://isomorphic.in/services.html">
-    <meta name="keywords" content="AI Chatbot Services, Turnkey AI Chatbot, Custom RAG Ingestion, AI Embed Script, Isomorphic AI">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://isomorphic.in/services.html">
-    <meta property="og:title" content="Services &amp; Turnkey Process | Isomorphic">
-    <meta property="og:description" content="Explore our full-stack conversational AI services: RAG data ingestion, voice widgets, admin portals, guardrails, automated sync, and turnkey deployment in 48 hours.">
-    <meta property="og:image" content="https://isomorphic.in/assets/portal-screenshot.png">
-    <meta property="og:site_name" content="Isomorphic">
+    <meta property="og:title" content="Services &amp; Turnkey Process | Isomorphic AI">
+    <meta property="og:description" content="Full-stack enterprise RAG implementation: automated document parsing, deterministic AI, in-chatbot ticketing, and custom tenant admin portals.">
+    <meta property="og:image" content="assets/portal-screenshot.png">
+    <meta property="og:site_name" content="Isomorphic AI">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=22.0">
+    <!-- Fonts Preload -->
+    <link rel="preload" href="assets/fonts/MatterUprights-VF.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/SeasonMixVFUprights.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Luxury Animated Ambient Aurora Background & Grid -->
-    <div class="ambient-aurora-bg" aria-hidden="true">
-        <div class="aurora-grid-pattern"></div>
-        <div class="aurora-glow aurora-1"></div>
-        <div class="aurora-glow aurora-2"></div>
-        <div class="aurora-glow aurora-3"></div>
-    </div>
+<body class="font-matter">
 
-    <!-- Reading Scroll Progress Bar -->
-    <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
-
-    <!-- Minimal Header Navigation -->
-    <header class="site-header" id="navbar">
-        <div class="container nav-container">
-                        <a href="index.html" class="logo" aria-label="Isomorphic Home">
-                <img src="assets/isomorphic-logo.png" alt="Isomorphic" class="site-logo-img" width="145" height="32">
+    <!-- Sticky Frosted Header Navigation -->
+    <header class="sarvam-header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-brand" aria-label="Isomorphic AI Home">
+                <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="header-logo-img">
             </a>
 
-            <nav class="nav-links" id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="platform.html">Platform</a>
-                <a href="solutions.html">Solutions</a>
-                <a href="services.html" class="nav-active">Services</a>
-                <a href="security.html">Security</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+            <nav class="header-nav" aria-label="Main Navigation">
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Products</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Production Chatbots</span>
+                            <span class="dropdown-link-desc">Zero-hallucination RAG chatbots trained on your docs</span>
+                        </a>
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Voice Support Agents</span>
+                            <span class="dropdown-link-desc">Sub-300ms conversational voice with native accents</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">In-Chatbot Ticketing</span>
+                            <span class="dropdown-link-desc">Native grievance logging with automated human escalation</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">Tenant Admin Portal</span>
+                            <span class="dropdown-link-desc">Multi-tenant telemetry, analytics, and token auditing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Platform</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Admin Portal Suite</span>
+                            <span class="dropdown-link-desc">Telemetry, token tracking and user roles</span>
+                        </a>
+                        <a href="index.html#stack" class="dropdown-link">
+                            <span class="dropdown-link-title">Vector Isolation</span>
+                            <span class="dropdown-link-desc">Dedicated tenant schemas with zero data leakage</span>
+                        </a>
+                        <a href="index.html#apis" class="dropdown-link">
+                            <span class="dropdown-link-title">Developer APIs</span>
+                            <span class="dropdown-link-desc">Clean REST endpoints for chat, ingest, and voice</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Security &amp; Governance</span>
+                            <span class="dropdown-link-desc">SOC 2 Type II, ISO 27001, and RBAC controls</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Solutions</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Financial Services &amp; Banking</span>
+                            <span class="dropdown-link-desc">Strict compliance, KYC assist, and loan querying</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">E-Commerce &amp; Retail</span>
+                            <span class="dropdown-link-desc">Order tracking, return triage, and cart recovery</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Enterprise IT &amp; Support</span>
+                            <span class="dropdown-link-desc">Automated ticket deflection and internal wiki search</span>
+                        </a>
+                        <a href="services.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Turnkey Implementation</span>
+                            <span class="dropdown-link-desc">48-hour SLA deployment, custom chunking &amp; tuning</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Company</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="about.html" class="dropdown-link">
+                            <span class="dropdown-link-title">About &amp; Team</span>
+                            <span class="dropdown-link-desc">Our mission and founding leadership</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Trust &amp; Security</span>
+                            <span class="dropdown-link-desc">Data residency and privacy guarantees</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Contact Us</span>
+                            <span class="dropdown-link-desc">Speak with our founding engineering team</span>
+                        </a>
+                    </div>
+                </div>
             </nav>
 
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-dark-pill">Book a demo &rarr;</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu" type="button">
-                    <span class="toggle-bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
+            <div class="header-actions">
+                <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-ghost" style="padding: 8px 18px;">
+                    <span>Client Portal</span>
+                </a>
+                <a href="contact.html" class="blur-btn blur-btn-primary" style="padding: 8px 18px;">
+                    <span class="blur-btn-glow"></span>
+                    <span>Book a Demo</span>
+                </a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle Navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <main id="page-content">
-        <!-- Page Hero Banner -->
-        <section class="page-header-section">
-            <div class="container">
-                <div class="page-header-wrap">
-                    <span class="section-eyebrow">Full-Stack AI Implementation</span>
-                    <h1>End-to-End Managed Conversational AI</h1>
-                    <p>We handle the heavy lifting: vector chunking, system prompts, frontend widgets, real-time telemetry, and weekly re-crawling so your team stays focused on your business.</p>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="platform.html" class="mobile-nav-link">Platform &amp; Portal</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="services.html" class="mobile-nav-link" style="color: var(--color-sr-indigo-700); font-weight: 600;">Services</a>
+        <a href="security.html" class="mobile-nav-link">Security</a>
+        <a href="about.html" class="mobile-nav-link">About &amp; Team</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+            <a href="contact.html" class="blur-btn blur-btn-primary blur-btn-lg" style="text-align: center;">Book a Demo</a>
+            <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-outline blur-btn-lg" style="text-align: center;">Client Login</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="subpage-hero" data-section-reveal>
+            <div class="container-wide">
+                <div class="hero-tag-pill" style="margin: 0 auto 1.5rem auto;">
+                    <span class="tag-dot"></span>
+                    <span>Full-Stack AI Implementation &bull; 48-Hour SLA</span>
                 </div>
+                <h1 class="subpage-title">
+                    Managed Conversational AI.<br>
+                    <span class="font-season italic-serif" style="color: var(--color-sr-indigo-700);">Zero Engineering Lift.</span>
+                </h1>
+                <p class="subpage-subtitle">
+                    We handle the entire pipeline: automated document crawling, chunking, prompt tuning, custom frontend widget theming, in-chatbot ticketing, and tenant portal provisioning.
+                </p>
             </div>
         </section>
 
-        <!-- Implementation Phases & Detailed Deliverables -->
-        <section class="deliverables-section">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Managed AI Implementation</span>
-                    <h2>End-to-End Enterprise Deliverables</h2>
-                    <p>We handle every layer of data engineering, vector tuning, widget embedding, and ongoing accuracy audits so your team focuses on growth.</p>
-                </div>
-
-                <div class="phase-grid">
+        <!-- 6-Phase Framework Bento Cards -->
+        <section class="sarvam-section" style="padding-top: 2rem;">
+            <div class="container-wide">
+                <div class="solutions-grid-3">
+                    
                     <!-- Phase 1 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 01 // Ingestion &amp; Discovery</span>
-                        <h3>Knowledge Ingestion &amp; Parsing</h3>
-                        <p>We connect directly to your documentation URLs, PDFs, Notion spaces, and customer support tickets.</p>
-                        <ul class="phase-items-list">
-                            <li>Automated URL &amp; sitemap crawling</li>
-                            <li>PDF, DOCX &amp; Table vector chunking</li>
-                            <li>Named Entity Recognition &amp; PII sanitization</li>
-                            <li>Metadata tagging &amp; taxonomy calibration</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 01 // INGESTION
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Knowledge Ingestion &amp; Parsing
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We connect directly to your documentation URLs, sitemaps, PDFs, Notion spaces, and customer support tickets with automated PII sanitization.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Automated recursive crawling
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Semantic table &amp; PDF chunking
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Regex &amp; NER PII masking
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Phase 2 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 02 // Pipeline Tuning</span>
-                        <h3>Deterministic RAG Modeling</h3>
-                        <p>We configure embedding pipelines with strict mathematical bounding to eliminate hallucination risks.</p>
-                        <ul class="phase-items-list">
-                            <li>Dedicated isolated tenant vector index</li>
-                            <li>Cosine distance similarity threshold tuning</li>
-                            <li>Exact clause &amp; URL citation grounding</li>
-                            <li>Automated prompt injection defense barriers</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 02 // MODELING
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Deterministic RAG Modeling
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We configure embedding pipelines with strict mathematical bounding to eliminate hallucination risks completely.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Dedicated vector partitions
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Calibrated cosine similarity thresholds
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Exact paragraph &amp; URL citations
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Phase 3 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 03 // Frontend &amp; Voice</span>
-                        <h3>Custom Widget &amp; Voice Synthesis</h3>
-                        <p>We build your branded widget with speech-to-text dictation, neural TTS audio, and custom colors.</p>
-                        <ul class="phase-items-list">
-                            <li>Brand logos, color palettes &amp; quick chips</li>
-                            <li>FastWhisper browser voice dictation (STT)</li>
-                            <li>24kHz high-fidelity neural audio playback (TTS)</li>
-                            <li>Lightweight &lt;25KB async zero-dependency script</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 03 // FRONTEND
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Custom Widget &amp; Voice
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We build your branded widget with FastWhisper voice dictation, 24kHz neural audio playback, and custom theme tokens.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Pixel-matched brand tokens
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> In-browser microphone STT
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Seamless 2-minute script embed
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Phase 4 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 04 // Native Ticketing &amp; CRM</span>
-                        <h3>Native Ticketing &amp; CRM Routing</h3>
-                        <p>We configure in-chatbot user ticket generation, tenant portal escalation queues, and optional CRM lead connectors.</p>
-                        <ul class="phase-items-list">
-                            <li>In-chatbot ticket creation on user request</li>
-                            <li>Tenant Admin assignment &amp; resolution actions</li>
-                            <li>Real-time Slack / MS Teams grievance alerts</li>
-                            <li>HubSpot &amp; Salesforce CRM lead webhooks</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 04 // TICKETING
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Grievance Dispatch &amp; Workflows
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We configure in-chatbot user ticket generation, tenant portal escalation queues, and optional CRM connectors.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> In-chatbot grievance forms
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Automatic email confirmations
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Real-time push to tenant portal
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Phase 5 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 05 // Governance &amp; RBAC</span>
-                        <h3>Customized Tenant Portal &amp; Telemetry</h3>
-                        <p>We provision your dedicated tenant administrative portal with native ticketing queues, latency analytics, and access controls.</p>
-                        <ul class="phase-items-list">
-                            <li>Sub-second Time-to-First-Token latency telemetry</li>
-                            <li>Native Grievance &amp; Support Ticket Workspace</li>
-                            <li>5-tier Role-Based Access Control (RBAC) matrix</li>
-                            <li>Exportable turn-by-turn audit logs</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 05 // PORTAL
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Custom Tenant Admin Portal
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We provision your dedicated administrative portal with native ticketing queues, latency analytics, and RBAC.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Sub-second latency telemetry
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> 5-tier role-based access control
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Turn-by-turn compliance logs
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Phase 6 -->
-                    <div class="phase-card">
-                        <span class="phase-badge">Phase 06 // Optimization</span>
-                        <h3>Weekly Sync &amp; Accuracy Audits</h3>
-                        <p>We perform ongoing accuracy reviews and automated knowledge updates to ensure zero drift.</p>
-                        <ul class="phase-items-list">
-                            <li>Automated weekly knowledge base re-crawling</li>
-                            <li>CSAT satisfaction &amp; deflection rate reviews</li>
-                            <li>Continuous prompt &amp; taxonomy refinement</li>
-                            <li>Dedicated enterprise Solutions Engineer SLA</li>
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            PHASE 06 // CONTINUOUS SLA
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Weekly Sync &amp; Accuracy Audits
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+                            We perform ongoing accuracy reviews and automated knowledge updates to ensure zero drift over time.
+                        </p>
+                        <ul style="font-size: 14px; color: #64748b; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Automated weekly sitemap recrawls
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Hallucination drift monitoring
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: var(--color-sr-indigo-600); font-weight: bold;">&bull;</span> Dedicated solutions engineer SLA
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Implementation Model Comparison -->
-        <section class="comparison-section" style="border-top: 1px solid var(--color-border);" data-reveal="fade-up">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Strategic Decision</span>
-                    <h2>Comparing Your Implementation Options</h2>
-                    <p>Why enterprises partner with Isomorphic rather than building in-house or relying on generic tools.</p>
-                </div>
-
-                <div class="comparison-table-wrap">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Operational Dimension</th>
-                                <th>In-House DIY Engineering</th>
-                                <th>Generic Off-The-Shelf Bots</th>
-                                <th>Isomorphic Managed AI</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span class="table-feature-title">Time to Production</span>
-                                </td>
-                                <td><span class="badge-loser">✕ 3 - 6 Months</span></td>
-                                <td><span class="badge-loser">✕ 2 - 4 Weeks</span></td>
-                                <td><span class="badge-winner">✓ 48 - 72 Hours</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="table-feature-title">Data Privacy &amp; Isolation</span>
-                                </td>
-                                <td><span class="badge-winner">✓ Custom VPC Build</span></td>
-                                <td><span class="badge-loser">✕ Shared Third-Party Pool</span></td>
-                                <td><span class="badge-winner">✓ 100% Tenant Vector Partitions</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="table-feature-title">Hallucination Bounding</span>
-                                </td>
-                                <td><span class="badge-loser">✕ Complex Custom R&amp;D</span></td>
-                                <td><span class="badge-loser">✕ High Risk of Speculation</span></td>
-                                <td><span class="badge-winner">✓ Deterministic Document Grounding</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="table-feature-title">Ongoing Maintenance</span>
-                                </td>
-                                <td><span class="badge-loser">✕ Dedicated ML Eng Team</span></td>
-                                <td><span class="badge-loser">✕ Manual Document Re-Uploads</span></td>
-                                <td><span class="badge-winner">✓ Fully Managed &amp; Auto-Crawled</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="table-feature-title">Multimodal Voice (STT/TTS)</span>
-                                </td>
-                                <td><span class="badge-loser">✕ High Infrastructure Cost</span></td>
-                                <td><span class="badge-loser">✕ Unsupported / Text-Only</span></td>
-                                <td><span class="badge-winner">✓ FastWhisper + 24kHz Neural Voice</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Integrations Ecosystem Grid -->
-        <section class="integrations-section" style="border-top: 1px solid var(--color-border);" data-reveal="fade-up">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Enterprise Stack</span>
-                    <h2>Pre-Built Connectors for Your Ecosystem</h2>
-                    <p>Integrate your knowledge sources and output workflows in minutes without custom backend development.</p>
-                </div>
-
-                <div class="integrations-grid-six">
-                    <div class="integration-item">
-                        <span class="integration-icon">🌐</span>
-                        <span class="integration-name">WordPress</span>
-                        <span class="integration-type">Script / Plugin</span>
-                    </div>
-                    <div class="integration-item">
-                        <span class="integration-icon">🛍️</span>
-                        <span class="integration-name">Shopify</span>
-                        <span class="integration-type">Store Embed</span>
-                    </div>
-                    <div class="integration-item">
-                        <span class="integration-icon">⚡</span>
-                        <span class="integration-name">Next.js</span>
-                        <span class="integration-type">React Component</span>
-                    </div>
-                    <div class="integration-item">
-                        <span class="integration-icon">🟧</span>
-                        <span class="integration-name">HubSpot</span>
-                        <span class="integration-type">Lead Webhook</span>
-                    </div>
-                    <div class="integration-item">
-                        <span class="integration-icon">☁️</span>
-                        <span class="integration-name">Salesforce</span>
-                        <span class="integration-type">CRM Sync</span>
-                    </div>
-                    <div class="integration-item">
-                        <span class="integration-icon">🎫</span>
-                        <span class="integration-name">Native Ticketing</span>
-                        <span class="integration-type">Tenant Portal Hub</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Action Showcase Banner -->
-        <section class="cta-banner-section" data-reveal="fade-up">
-            <div class="container">
-                <div class="cta-banner-box">
-                    <h2>Ready to Deploy a Turnkey AI Chatbot?</h2>
-                    <p>Share your website or documentation link; our engineering team will build an interactive preview within 24 hours.</p>
-                    <div class="cta-buttons-wrap">
-                        <a href="contact.html" class="btn btn-primary btn-lg">Schedule Implementation Call &rarr;</a>
-                        <a href="platform.html" class="btn btn-outline btn-lg">Inspect Admin Portal Suite</a>
+        <!-- Final Call to Action Section -->
+        <section class="final-cta-section" data-section-reveal>
+            <div class="container-wide">
+                <div class="final-cta-card">
+                    <h2 class="final-cta-heading">
+                        Ready to Deploy a Turnkey<br>AI Chatbot?
+                    </h2>
+                    <p style="font-size: 16px; color: #cbd5e1; max-width: 600px; margin: 0 auto 32px;">
+                        Share your website or documentation link; our engineering team will build an interactive preview within 24–48 hours.
+                    </p>
+                    <div class="final-cta-btn-group">
+                        <a href="contact.html" class="blur-btn blur-btn-primary blur-btn-lg">
+                            <span class="blur-btn-glow"></span>
+                            <span>Schedule Implementation Call</span>
+                        </a>
+                        <a href="platform.html" class="blur-btn blur-btn-outline blur-btn-lg">
+                            <span>Inspect Admin Platform Suite</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Symmetrical 3-Column Luxury Footer -->
-    <footer class="site-footer">
-        <div class="container">
+    <!-- Global Footer -->
+    <footer class="sarvam-footer">
+        <div class="container-wide">
             <div class="footer-top-grid">
-                <!-- Column 1: Brand & Social Links -->
-                <div class="footer-col-brand">
-                    <a href="index.html" class="footer-logo" aria-label="Isomorphic">
-                        <img src="assets/isomorphic-logo-light.png" alt="Isomorphic" class="footer-logo-img" width="138" height="30">
+                <div class="footer-brand-col">
+                    <a href="index.html">
+                        <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="footer-logo-img" style="height: 28px; width: auto;">
                     </a>
-                    <p class="footer-brand-desc">24/7 customer intelligence at scale. Enterprise RAG conversational AI engineered with zero hallucinations.</p>
-                    <div class="footer-social-links" aria-label="Social Media Profiles">
-                        <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.01-3.28 1.64 1.64 0 0 0 .01 3.28M5.07 18.5h2.78v-8.37H5.07v8.37Z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)" title="X (Twitter)">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/isomorphic.in?stkn=MW1mcmFtYzU5aGZqMw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/share/1C6zvKg7ZN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
+                    <p class="footer-tagline">24/7 customer intelligence at scale</p>
+                    <div class="footer-compliance-badges">
+                        <div class="compliance-badge-tile" title="ISO 27001 Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-iso.png" alt="ISO Certified">
+                        </div>
+                        <div class="compliance-badge-tile" title="SOC 2 Type II Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-soc2.png" alt="SOC 2 Type II">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Navigation Links Grid -->
-                <div class="footer-col-links">
-                    <h4 class="footer-col-title">Platform Navigation</h4>
-                    <div class="footer-nav-links-grid">
-                        <a href="index.html">Home</a>
-                        <a href="platform.html">Admin Portal</a>
-                        <a href="solutions.html">Solutions</a>
-                        <a href="services.html">Services &amp; Process</a>
-                        <a href="security.html">Security &amp; RBAC</a>
-                        <a href="about.html">About &amp; Team</a>
-                        <a href="contact.html">Contact &amp; FAQ</a>
-                        <a href="contact.html">Book a Demo &rarr;</a>
+                <div class="footer-links-grid">
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Products</span>
+                        <a href="index.html#playground" class="footer-link">Production Chatbots</a>
+                        <a href="index.html#playground" class="footer-link">Voice Support Agents</a>
+                        <a href="index.html#cowork" class="footer-link">In-Chatbot Ticketing</a>
+                        <a href="index.html#cowork" class="footer-link">Tenant Admin Portal</a>
+                        <a href="index.html#playground" class="footer-link">Knowledge Ingestion</a>
                     </div>
-                </div>
 
-                <!-- Column 3: Inquiries & Support -->
-                <div class="footer-col-contact">
-                    <h4 class="footer-col-title">Enterprise Support</h4>
-                    <div class="footer-contact-card">
-                        <a href="mailto:help@isomorphic.in" class="footer-email-link">
-                            <span>✉️ help@isomorphic.in</span>
-                        </a>
-                        <p>Dedicated technical engineering support for enterprise clients.</p>
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Platform</span>
+                        <a href="platform.html" class="footer-link">Admin Portal</a>
+                        <a href="index.html#stack" class="footer-link">Vector Isolation</a>
+                        <a href="index.html#apis" class="footer-link">Developer APIs</a>
+                        <a href="security.html" class="footer-link">Security &amp; Governance</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Solutions</span>
+                        <a href="solutions.html" class="footer-link">Financial Services</a>
+                        <a href="solutions.html" class="footer-link">E-Commerce</a>
+                        <a href="solutions.html" class="footer-link">Enterprise IT</a>
+                        <a href="services.html" class="footer-link">Turnkey Services</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Company</span>
+                        <a href="about.html" class="footer-link">About &amp; Team</a>
+                        <a href="security.html" class="footer-link">Trust Center</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="contact.html" class="footer-link">Book a Demo</a>
+                        <a href="index.html" class="footer-link">Brand Assets</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Legal</span>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Data Processing Addendum</a>
+                        <a href="security.html" class="footer-link">Security Disclosures</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer Bottom Bar -->
             <div class="footer-bottom-bar">
-                <span>&copy; 2026 Isomorphic AI. All rights reserved.</span>
-                <span>Deterministic Grounding &bull; 100% Vector Isolation</span>
+                <div>&copy; 2026 Isomorphic AI (isomorphic.in). All rights reserved.</div>
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener" class="footer-social-icon" aria-label="X / Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/isomorphic.in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Back to Top Button -->
-    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" type="button">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
-    </button>
+    <!-- Discreet Cookie Consent Toast -->
+    <div class="cookie-consent-bar" id="cookieConsentBar">
+        <div>We use cookies to analyze site usage and optimize your experience on Isomorphic AI.</div>
+        <div class="cookie-consent-btns">
+            <button type="button" class="blur-btn blur-btn-primary" id="cookieAcceptBtn" style="padding: 6px 16px; font-size: 12px;">Accept</button>
+        </div>
+    </div>
 
-    <script src="script.js?v=19.0"></script>
+    <script src="script.js"></script>
 </body>
 </html>

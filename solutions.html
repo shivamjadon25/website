@@ -3,507 +3,404 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <title>Industry Solutions | Isomorphic AI</title>
+    <meta name="description" content="Discover custom RAG chatbots and native ticketing tailored for Higher Education, E-Commerce, B2B SaaS, Real Estate, and Financial Services.">
+    <link rel="canonical" href="https://isomorphic.in/solutions.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" href="assets/isomorphic-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <title>Industry AI Solutions | Isomorphic</title>
-    <meta name="description" content="Customized conversational AI solutions tailored for Higher Education, E-Commerce, SaaS, Real Estate, Finance/Legal, and Enterprise IT.">
-    
-    <!-- SEO & Indexing Meta Tags -->
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://isomorphic.in/solutions.html">
-    <meta name="keywords" content="Higher Ed AI Chatbot, Ecommerce AI Chatbot, Real Estate Conversational AI, SaaS AI Support, Legal RAG AI, Isomorphic AI">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://isomorphic.in/solutions.html">
-    <meta property="og:title" content="Industry AI Solutions | Isomorphic">
-    <meta property="og:description" content="Customized conversational AI solutions tailored for Higher Education, E-Commerce, SaaS, Real Estate, Finance/Legal, and Enterprise IT.">
-    <meta property="og:image" content="https://isomorphic.in/assets/portal-screenshot.png">
-    <meta property="og:site_name" content="Isomorphic">
+    <meta property="og:title" content="Industry Solutions | Isomorphic AI">
+    <meta property="og:description" content="Custom deterministic RAG conversational AI and tenant admin ticketing engineered for specific enterprise verticals.">
+    <meta property="og:image" content="assets/portal-screenshot.png">
+    <meta property="og:site_name" content="Isomorphic AI">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=22.0">
+    <!-- Fonts Preload -->
+    <link rel="preload" href="assets/fonts/MatterUprights-VF.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/SeasonMixVFUprights.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Luxury Animated Ambient Aurora Background & Grid -->
-    <div class="ambient-aurora-bg" aria-hidden="true">
-        <div class="aurora-grid-pattern"></div>
-        <div class="aurora-glow aurora-1"></div>
-        <div class="aurora-glow aurora-2"></div>
-        <div class="aurora-glow aurora-3"></div>
-    </div>
+<body class="font-matter">
 
-    <!-- Reading Scroll Progress Bar -->
-    <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
-
-    <!-- Minimal Header Navigation -->
-    <header class="site-header" id="navbar">
-        <div class="container nav-container">
-                        <a href="index.html" class="logo" aria-label="Isomorphic Home">
-                <img src="assets/isomorphic-logo.png" alt="Isomorphic" class="site-logo-img" width="145" height="32">
+    <!-- Sticky Frosted Header Navigation -->
+    <header class="sarvam-header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-brand" aria-label="Isomorphic AI Home">
+                <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="header-logo-img">
             </a>
 
-            <nav class="nav-links" id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="platform.html">Platform</a>
-                <a href="solutions.html" class="nav-active">Solutions</a>
-                <a href="services.html">Services</a>
-                <a href="security.html">Security</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+            <nav class="header-nav" aria-label="Main Navigation">
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Products</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Production Chatbots</span>
+                            <span class="dropdown-link-desc">Zero-hallucination RAG chatbots trained on your docs</span>
+                        </a>
+                        <a href="index.html#playground" class="dropdown-link">
+                            <span class="dropdown-link-title">Voice Support Agents</span>
+                            <span class="dropdown-link-desc">Sub-300ms conversational voice with native accents</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">In-Chatbot Ticketing</span>
+                            <span class="dropdown-link-desc">Native grievance logging with automated human escalation</span>
+                        </a>
+                        <a href="index.html#cowork" class="dropdown-link">
+                            <span class="dropdown-link-title">Tenant Admin Portal</span>
+                            <span class="dropdown-link-desc">Multi-tenant telemetry, analytics, and token auditing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Platform</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Admin Portal Suite</span>
+                            <span class="dropdown-link-desc">Telemetry, token tracking and user roles</span>
+                        </a>
+                        <a href="index.html#stack" class="dropdown-link">
+                            <span class="dropdown-link-title">Vector Isolation</span>
+                            <span class="dropdown-link-desc">Dedicated tenant schemas with zero data leakage</span>
+                        </a>
+                        <a href="index.html#apis" class="dropdown-link">
+                            <span class="dropdown-link-title">Developer APIs</span>
+                            <span class="dropdown-link-desc">Clean REST endpoints for chat, ingest, and voice</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Security &amp; Governance</span>
+                            <span class="dropdown-link-desc">SOC 2 Type II, ISO 27001, and RBAC controls</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Solutions</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Financial Services &amp; Banking</span>
+                            <span class="dropdown-link-desc">Strict compliance, KYC assist, and loan querying</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">E-Commerce &amp; Retail</span>
+                            <span class="dropdown-link-desc">Order tracking, return triage, and cart recovery</span>
+                        </a>
+                        <a href="solutions.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Enterprise IT &amp; Support</span>
+                            <span class="dropdown-link-desc">Automated ticket deflection and internal wiki search</span>
+                        </a>
+                        <a href="services.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Turnkey Implementation</span>
+                            <span class="dropdown-link-desc">48-hour SLA deployment, custom chunking &amp; tuning</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button type="button" class="nav-link-btn" aria-haspopup="true">
+                        <span>Company</span>
+                        <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="about.html" class="dropdown-link">
+                            <span class="dropdown-link-title">About &amp; Team</span>
+                            <span class="dropdown-link-desc">Our mission and founding leadership</span>
+                        </a>
+                        <a href="security.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Trust &amp; Security</span>
+                            <span class="dropdown-link-desc">Data residency and privacy guarantees</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-link">
+                            <span class="dropdown-link-title">Contact Us</span>
+                            <span class="dropdown-link-desc">Speak with our founding engineering team</span>
+                        </a>
+                    </div>
+                </div>
             </nav>
 
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-dark-pill">Book a demo &rarr;</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu" type="button">
-                    <span class="toggle-bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
+            <div class="header-actions">
+                <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-ghost" style="padding: 8px 18px;">
+                    <span>Client Portal</span>
+                </a>
+                <a href="contact.html" class="blur-btn blur-btn-primary" style="padding: 8px 18px;">
+                    <span class="blur-btn-glow"></span>
+                    <span>Book a Demo</span>
+                </a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle Navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <main id="page-content">
-        <!-- Page Hero Banner -->
-        <section class="page-header-section">
-            <div class="container">
-                <div class="page-header-wrap">
-                    <span class="section-eyebrow">Industry-Specific Solutions</span>
-                    <h1>Calibrated for Your Exact Sector &amp; Workflows</h1>
-                    <p>Every industry uses unique terminology, regulatory compliance boundaries, and visitor intents. We configure specialized vector partitions and guardrails for your sector.</p>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="platform.html" class="mobile-nav-link">Platform &amp; Portal</a>
+        <a href="solutions.html" class="mobile-nav-link" style="color: var(--color-sr-indigo-700); font-weight: 600;">Solutions</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="security.html" class="mobile-nav-link">Security</a>
+        <a href="about.html" class="mobile-nav-link">About &amp; Team</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+            <a href="contact.html" class="blur-btn blur-btn-primary blur-btn-lg" style="text-align: center;">Book a Demo</a>
+            <a href="https://isomorphic.in/portal" class="blur-btn blur-btn-outline blur-btn-lg" style="text-align: center;">Client Login</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="subpage-hero" data-section-reveal>
+            <div class="container-wide">
+                <div class="hero-tag-pill" style="margin: 0 auto 1.5rem auto;">
+                    <span class="tag-dot"></span>
+                    <span>Industry Implementations &bull; Turnkey RAG</span>
+                </div>
+                <h1 class="subpage-title">
+                    Tailored RAG Solutions for<br>
+                    <span class="font-season italic-serif" style="color: var(--color-sr-indigo-700);">Every Enterprise Vertical.</span>
+                </h1>
+                <p class="subpage-subtitle">
+                    Calibrated vector partitions and automated in-chatbot ticketing workflows customized for the specific governance, data compliance, and operational scale of your industry.
+                </p>
+            </div>
+        </section>
+
+        <!-- Vertical Solution Bento Cards -->
+        <section class="sarvam-section" style="padding-top: 2rem;">
+            <div class="container-wide">
+                <div class="solutions-grid-3">
+                    
+                    <!-- 1. Higher Education -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 01 // HIGHER ED
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Higher Education &amp; Universities
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Guide prospective students through admissions, course prerequisites, and fee schedules. When human academic advisory is required, tickets escalate directly to university counseling staff with student context.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; Course Catalog Ingestion &bull; FERPA Guardrails
+                        </div>
+                    </div>
+
+                    <!-- 2. E-Commerce & Retail -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 02 // COMMERCE
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            E-Commerce &amp; High-Volume Retail
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Automate order inquiries, return policies, warranty lookups, and product specs. Unresolved customer disputes trigger instant in-chat grievance tickets routed into fulfillment escalation queues.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; Return Policy Grounding &bull; Shopify / ERP Bridge
+                        </div>
+                    </div>
+
+                    <!-- 3. B2B SaaS -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 03 // SAAS
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            B2B SaaS &amp; API Platforms
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Support developer documentation, webhook configuration, SDK syntax, and authentication guides. In-chat tickets bridge directly to engineering on-call queues with full code snippets.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; OpenAPI / Swagger Ingestion &bull; GitHub / Slack Sync
+                        </div>
+                    </div>
+
+                    <!-- 4. Real Estate -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 04 // REAL ESTATE
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Real Estate &amp; Property Portfolios
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Answer inquiries on square footage, HOA covenants, lease terms, and viewing schedules. Lead contact details and inspection requests are converted into verified broker tickets instantly.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; Floorplan PDF Chunking &bull; Lead Routing Telemetry
+                        </div>
+                    </div>
+
+                    <!-- 5. Finance -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 05 // FINANCE
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Financial Services &amp; Wealth Management
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Assist clients with account policies, compliance filings, fee disclosures, and wire transfer guidelines with zero hallucination risk and automated PII masking.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; SOC 2 / SEC Compliant &bull; Automated NER Sanitization
+                        </div>
+                    </div>
+
+                    <!-- 6. Enterprise IT -->
+                    <div class="bento-card" data-scale-reveal>
+                        <div class="bento-badge" style="background: rgba(106, 136, 226, 0.12); color: var(--color-sr-indigo-700);">
+                            VERTICAL 06 // INTERNAL IT
+                        </div>
+                        <h3 class="font-season" style="font-size: 26px; font-weight: 400; margin-bottom: 12px; color: var(--color-sr-charcoal);">
+                            Enterprise IT, HR &amp; Internal Desks
+                        </h3>
+                        <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 24px;">
+                            Deflect employee inquiries regarding health benefits, PTO policies, equipment procurement, and VPN setups with private SSO integration and internal ticketing queues.
+                        </p>
+                        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.06); font-family: var(--font-mono); font-size: 12px; color: var(--color-sr-indigo-700); letter-spacing: 0.04em;">
+                            &bull; Notion / Confluence Sync &bull; Okta SSO Integration
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Solutions Deep Dive Grid -->
-        <section class="solutions-section">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Enterprise Domain Adaptation</span>
-                    <h2>Tailored Architecture for High-Volume Workflows</h2>
-                    <p>Explore how our deterministic RAG pipelines resolve complex, domain-specific inquiries with zero hallucinations across major industries.</p>
-                </div>
-
-                <div class="sector-deepdive-grid">
-                    <!-- Sector 1: Higher Ed -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">🎓</div>
-                                <div class="sector-title-box">
-                                    <h3>Higher Education &amp; Student Services</h3>
-                                    <span class="sector-badge">FERPA Compliant &bull; 24/7 Enrollment Help</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Automates complex inquiries across admissions deadlines, FAFSA financial aid calculations, course prerequisites, campus housing guidelines, and registrar fee timelines without manual staff overburden during peak enrollment cycles.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Admissions &amp; FAFSA Triage:</strong> Guides prospective students through credit transfers, fee waivers, and application status checks.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Course Catalog &amp; Degree Auditing:</strong> Instantly cross-references degree requirements and prerequisite course sequences with verified citations.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Campus Emergency &amp; Housing:</strong> Delivers instant dorm check-in policies, dining hours, and shuttle schedules in multiple languages.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">High</span>
-                                <span class="lbl">Inquiry Deflection</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Sub-Second</span>
-                                <span class="lbl">Response Latency</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Verified</span>
-                                <span class="lbl">Citation Grounding</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sector 2: E-Commerce -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">🛍️</div>
-                                <div class="sector-title-box">
-                                    <h3>E-Commerce &amp; D2C Retail Brands</h3>
-                                    <span class="sector-badge">24/7 Order Triage &bull; Returns Automation</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Converts website shoppers and handles high-volume post-purchase support across tracking numbers, returns, warranty claims, and sizing recommendations without queue wait times.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Real-Time Tracking &amp; Delivery:</strong> Queries order statuses and delivery window estimates via carrier tracking integrations.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Automated Return &amp; Refund Routing:</strong> Validates return policy windows and generates direct return portal links.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Interactive Sizing &amp; Catalog Matching:</strong> Recommends fitting guides and product specifications grounded in official manuals.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">High</span>
-                                <span class="lbl">Ticket Deflection</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Instant</span>
-                                <span class="lbl">Return Routing</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">24/7</span>
-                                <span class="lbl">Shopper Assistance</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sector 3: SaaS -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">💻</div>
-                                <div class="sector-title-box">
-                                    <h3>SaaS, Cloud &amp; Developer Platforms</h3>
-                                    <span class="sector-badge">Technical RAG &bull; Error Code Debugging</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Enables software developers and enterprise trial users to search API documentation, troubleshoot error stack traces, and discover copyable code examples directly on your documentation portal.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>REST API &amp; SDK Assistance:</strong> Returns exact endpoint syntax, authentication headers, and rate limit boundaries.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Error Code &amp; Log Triage:</strong> Diagnoses HTTP status codes and configuration mistakes with exact documentation links.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Trial Onboarding &amp; Feature Discovery:</strong> Guides prospective engineers through setup tutorials and webhook creation.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">Accurate</span>
-                                <span class="lbl">API Spec Retrieval</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Sub-Second</span>
-                                <span class="lbl">Search Speed</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Direct</span>
-                                <span class="lbl">Code Samples</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sector 4: Real Estate & Property Management -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">🏢</div>
-                                <div class="sector-title-box">
-                                    <h3>Real Estate &amp; Property Management</h3>
-                                    <span class="sector-badge">24/7 Leasing Triage &bull; Tour Scheduling</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Qualifies prospective tenants, answers floor plan and amenity inquiries, schedules in-person viewings, and triages property maintenance requests automatically.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Leasing &amp; Floor Plan Inquiries:</strong> Delivers instant square footage, pricing tiers, pet policies, and parking specifications.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Tour Scheduling &amp; Calendar Booking:</strong> Connects directly with leasing agent calendars to book property walkthroughs.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Tenant Maintenance Routing:</strong> Categorizes emergency vs. routine repair tickets with tenant photo and description capture.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">Instant</span>
-                                <span class="lbl">Tour Booking</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">24/7</span>
-                                <span class="lbl">Lead Qualification</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Seamless</span>
-                                <span class="lbl">CRM Integration</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sector 5: Finance & Legal -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">⚖️</div>
-                                <div class="sector-title-box">
-                                    <h3>Finance, Legal &amp; Compliance</h3>
-                                    <span class="sector-badge">SOC2 Type II &bull; Clause-Level Citations</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Provides strictly verified search across complex policies, terms of service, compliance filings, and regulatory guidelines with mathematical grounding.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Exact Clause &amp; Section Citations:</strong> Displays clickable citations referencing the exact PDF page, clause, and subsection.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Audit Log Archiving:</strong> Retains full prompt, token, latency, and vector similarity telemetry for audit inspections.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Zero Advisory Liability:</strong> Constrained to factual document retrieval with legal disclaimer disclosures.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">Strict</span>
-                                <span class="lbl">Clause Traceability</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Zero</span>
-                                <span class="lbl">Model Retraining</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">AES-256</span>
-                                <span class="lbl">Partitioned Encryption</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sector 6: Enterprise IT & HR -->
-                    <div class="sector-deepdive-card">
-                        <div>
-                            <div class="sector-header-wrap">
-                                <div class="sector-avatar-icon">💼</div>
-                                <div class="sector-title-box">
-                                    <h3>Enterprise HR &amp; Internal IT Helpdesks</h3>
-                                    <span class="sector-badge">Internal Knowledge &bull; Employee Self-Service</span>
-                                </div>
-                            </div>
-                            <p class="sector-body-text">
-                                Empower employees to self-resolve IT setup issues, VPN configurations, PTO benefit policies, and expense guidelines across internal Notion and Confluence spaces.
-                            </p>
-                            <div class="sector-features-list">
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>IT &amp; Hardware Troubleshooting:</strong> Step-by-step resolution for password resets, Wi-Fi certificates, and software licensing.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Employee Handbook &amp; Benefits:</strong> Answers questions on insurance benefits, parental leave, and 401(k) match policies.</span>
-                                </div>
-                                <div class="sector-feature-point">
-                                    <span class="check">✓</span>
-                                    <span><strong>Slack &amp; Teams Native Bot:</strong> Deploys seamlessly inside company communication channels with role-based access.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sector-metrics-bar">
-                            <div class="sector-metric-item">
-                                <span class="val">High</span>
-                                <span class="lbl">Internal Ticket Deflection</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Fast</span>
-                                <span class="lbl">Employee Onboarding</span>
-                            </div>
-                            <div class="sector-metric-item">
-                                <span class="val">Automated</span>
-                                <span class="lbl">Knowledge Discovery</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Compliance & Regulatory Matrix -->
-        <section class="comparison-section" style="border-top: 1px solid var(--color-border);" data-reveal="fade-up">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-eyebrow">Regulatory Governance</span>
-                    <h2>Cross-Sector Compliance Mapping</h2>
-                    <p>How Isomorphic meets and exceeds standard regulatory frameworks across industries.</p>
-                </div>
-
-                <div class="comparison-table-wrap">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Regulatory Standard</th>
-                                <th>Target Industry</th>
-                                <th>Isomorphic Security Implementation</th>
-                                <th>Compliance Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>FERPA</strong> (Family Educational Rights)</td>
-                                <td>Higher Education</td>
-                                <td>Student records isolation; no PII stored in embeddings; strict query access controls.</td>
-                                <td><span class="badge-winner">✓ Aligned</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>ISO 27001</strong> Information Security</td>
-                                <td>Enterprise &amp; Real Estate</td>
-                                <td>End-to-end access management, systematic risk mitigation, and strict operational controls.</td>
-                                <td><span class="badge-winner">✓ Aligned</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>SOC2 Type II</strong> Security Principles</td>
-                                <td>B2B SaaS &amp; Enterprise</td>
-                                <td>Continuous monitoring, end-to-end TLS 1.3 encryption, and automated intrusion detection.</td>
-                                <td><span class="badge-winner">✓ Certified Controls</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>GDPR &amp; DPDP</strong> Data Privacy</td>
-                                <td>Global E-Commerce &amp; SaaS</td>
-                                <td>Zero third-party model training; right-to-be-forgotten vector deletion APIs.</td>
-                                <td><span class="badge-winner">✓ Fully Compliant</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Action Showcase Banner -->
-        <section class="cta-banner-section" data-reveal="fade-up">
-            <div class="container">
-                <div class="cta-banner-box">
-                    <h2>Ready to Build a Tailored Solution for Your Organization?</h2>
-                    <p>Schedule a live demo to review custom vector pipelines and prototype bots trained on your documentation.</p>
-                    <div class="cta-buttons-wrap">
-                        <a href="contact.html" class="btn btn-primary btn-lg">Book an Industry Demo &rarr;</a>
-                        <a href="services.html" class="btn btn-outline btn-lg">Explore Implementation Services</a>
+        <!-- Final Call to Action Section -->
+        <section class="final-cta-section" data-section-reveal>
+            <div class="container-wide">
+                <div class="final-cta-card">
+                    <h2 class="final-cta-heading">
+                        Deploy a Solution Custom-Trained<br>for Your Industry
+                    </h2>
+                    <p style="font-size: 16px; color: #cbd5e1; max-width: 600px; margin: 0 auto 32px;">
+                        Whether higher education, enterprise SaaS, logistics, or healthcare, our engineering team configures domain-specific chunking, compliance guardrails, and tenant portals in 48 hours.
+                    </p>
+                    <div class="final-cta-btn-group">
+                        <a href="contact.html" class="blur-btn blur-btn-primary blur-btn-lg">
+                            <span class="blur-btn-glow"></span>
+                            <span>Request Working Prototype</span>
+                        </a>
+                        <a href="platform.html" class="blur-btn blur-btn-outline blur-btn-lg">
+                            <span>Inspect Admin Platform Suite</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Symmetrical 3-Column Luxury Footer -->
-    <footer class="site-footer">
-        <div class="container">
+    <!-- Global Footer -->
+    <footer class="sarvam-footer">
+        <div class="container-wide">
             <div class="footer-top-grid">
-                <!-- Column 1: Brand & Social Links -->
-                <div class="footer-col-brand">
-                    <a href="index.html" class="footer-logo" aria-label="Isomorphic">
-                        <img src="assets/isomorphic-logo-light.png" alt="Isomorphic" class="footer-logo-img" width="138" height="30">
+                <div class="footer-brand-col">
+                    <a href="index.html">
+                        <img src="assets/isomorphic-logo.png" alt="Isomorphic AI" class="footer-logo-img" style="height: 28px; width: auto;">
                     </a>
-                    <p class="footer-brand-desc">24/7 customer intelligence at scale. Enterprise RAG conversational AI engineered with zero hallucinations.</p>
-                    <div class="footer-social-links" aria-label="Social Media Profiles">
-                        <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.01-3.28 1.64 1.64 0 0 0 .01 3.28M5.07 18.5h2.78v-8.37H5.07v8.37Z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)" title="X (Twitter)">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/isomorphic.in?stkn=MW1mcmFtYzU5aGZqMw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/share/1C6zvKg7ZN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
+                    <p class="footer-tagline">24/7 customer intelligence at scale</p>
+                    <div class="footer-compliance-badges">
+                        <div class="compliance-badge-tile" title="ISO 27001 Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-iso.png" alt="ISO Certified">
+                        </div>
+                        <div class="compliance-badge-tile" title="SOC 2 Type II Certified">
+                            <img src="https://assets.sarvam.ai/tr:q-70,f-auto,dpr-auto/assets/misc/sec-soc2.png" alt="SOC 2 Type II">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Navigation Links Grid -->
-                <div class="footer-col-links">
-                    <h4 class="footer-col-title">Platform Navigation</h4>
-                    <div class="footer-nav-links-grid">
-                        <a href="index.html">Home</a>
-                        <a href="platform.html">Admin Portal</a>
-                        <a href="solutions.html">Solutions</a>
-                        <a href="services.html">Services &amp; Process</a>
-                        <a href="security.html">Security &amp; RBAC</a>
-                        <a href="about.html">About &amp; Team</a>
-                        <a href="contact.html">Contact &amp; FAQ</a>
-                        <a href="contact.html">Book a Demo &rarr;</a>
+                <div class="footer-links-grid">
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Products</span>
+                        <a href="index.html#playground" class="footer-link">Production Chatbots</a>
+                        <a href="index.html#playground" class="footer-link">Voice Support Agents</a>
+                        <a href="index.html#cowork" class="footer-link">In-Chatbot Ticketing</a>
+                        <a href="index.html#cowork" class="footer-link">Tenant Admin Portal</a>
+                        <a href="index.html#playground" class="footer-link">Knowledge Ingestion</a>
                     </div>
-                </div>
 
-                <!-- Column 3: Inquiries & Support -->
-                <div class="footer-col-contact">
-                    <h4 class="footer-col-title">Enterprise Support</h4>
-                    <div class="footer-contact-card">
-                        <a href="mailto:help@isomorphic.in" class="footer-email-link">
-                            <span>✉️ help@isomorphic.in</span>
-                        </a>
-                        <p>Dedicated technical engineering support for enterprise clients.</p>
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Platform</span>
+                        <a href="platform.html" class="footer-link">Admin Portal</a>
+                        <a href="index.html#stack" class="footer-link">Vector Isolation</a>
+                        <a href="index.html#apis" class="footer-link">Developer APIs</a>
+                        <a href="security.html" class="footer-link">Security &amp; Governance</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Solutions</span>
+                        <a href="solutions.html" class="footer-link">Financial Services</a>
+                        <a href="solutions.html" class="footer-link">E-Commerce</a>
+                        <a href="solutions.html" class="footer-link">Enterprise IT</a>
+                        <a href="services.html" class="footer-link">Turnkey Services</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Company</span>
+                        <a href="about.html" class="footer-link">About &amp; Team</a>
+                        <a href="security.html" class="footer-link">Trust Center</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="contact.html" class="footer-link">Book a Demo</a>
+                        <a href="index.html" class="footer-link">Brand Assets</a>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <span class="footer-col-title">Legal</span>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Data Processing Addendum</a>
+                        <a href="security.html" class="footer-link">Security Disclosures</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer Bottom Bar -->
             <div class="footer-bottom-bar">
-                <span>&copy; 2026 Isomorphic AI. All rights reserved.</span>
-                <span>Deterministic Grounding &bull; 100% Vector Isolation</span>
+                <div>&copy; 2026 Isomorphic AI (isomorphic.in). All rights reserved.</div>
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/company/isomorphic-in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://x.com/isomorphic_in?s=11" target="_blank" rel="noopener" class="footer-social-icon" aria-label="X / Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/isomorphic.in" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Back to Top Button -->
-    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" type="button">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
-    </button>
+    <!-- Discreet Cookie Consent Toast -->
+    <div class="cookie-consent-bar" id="cookieConsentBar">
+        <div>We use cookies to analyze site usage and optimize your experience on Isomorphic AI.</div>
+        <div class="cookie-consent-btns">
+            <button type="button" class="blur-btn blur-btn-primary" id="cookieAcceptBtn" style="padding: 6px 16px; font-size: 12px;">Accept</button>
+        </div>
+    </div>
 
-    <script src="script.js?v=19.0"></script>
+    <script src="script.js"></script>
 </body>
 </html>
